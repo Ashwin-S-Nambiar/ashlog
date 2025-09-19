@@ -2,7 +2,7 @@
 title: "Projects"
 date: 2025-09-19
 description: "A collection of my development projects during my learning journeys"
-tags: ["projects", "portfolio"]
+tags: ["Projects", "portfolio"]
 ---
 
 Welcome to my **project showcase** - a living collection of learning projects, and development adventures that shape my growth as a developer.
