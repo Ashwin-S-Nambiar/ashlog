@@ -14,10 +14,16 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
 }
 
 PageTitle.css = `
+@font-face {
+  font-family: 'Biro Script';
+  src: url('./static/BiroScriptUSPlus-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
 .page-title {
   font-size: 1.75rem;
   margin: 0;
-  font-family: var(--titleFont);
+  font-family: 'Biro Script', var(--titleFont);
 }
 `
 
