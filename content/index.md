@@ -5,6 +5,8 @@ description: "Introduction to my personal knowledge base"
 tags: ["intro", "meta", "projects"]
 ---
 
+![Banner](assets/banner.svg)
+
 AshLog is my **personal knowledge vault**, a place where I collect notes, ideas, and learnings as I grow as a developer.
 
 Unlike polished blog posts, the notes here are often raw, evolving, and interconnected more like a **digital garden** than a traditional blog.

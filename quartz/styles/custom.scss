@@ -1,3 +1,30 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* Banner SVG theme adaptation */
+img[src*="banner.svg"] {
+  /* In light mode, keep the original black color */
+  filter: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* In dark mode, invert the colors to make black elements visible */
+:root[saved-theme="dark"] img[src*="banner.svg"] {
+  filter: invert(1);
+}
+
+/* Support for system theme preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([saved-theme]) img[src*="banner.svg"] {
+    filter: invert(1);
+  }
+}
+
+/* Alternative approach for more precise control using CSS variables */
+.banner-adaptive path {
+  fill: var(--darkgray);
+}
