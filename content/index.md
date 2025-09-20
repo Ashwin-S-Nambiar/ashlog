@@ -1,8 +1,7 @@
 ---
-title: "AshLog"
+title: "Welcome to AshLog"
 date: 2025-09-19
 description: "Introduction to my personal knowledge base"
-tags: ["intro", "meta", "projects"]
 ---
 
 ![Banner](assets/banner.svg)
@@ -14,5 +13,5 @@ Unlike polished blog posts, the notes here are often raw, evolving, and intercon
 ## What you’ll find here
 - Notes on technologies I’m learning ([[Web Development]], [[Next.js]], [[React]], Azure, etc.)
 - Debugging tips and tricky problems I’ve solved
-- Code snippets, patterns, and reusable references
+- [[Projects]], Code snippets, patterns, and reusable references
 - Reflections on my projects and experiments
