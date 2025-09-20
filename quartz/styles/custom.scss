@@ -2,7 +2,7 @@
 
 // put your custom CSS here!
 
-/* Banner SVG theme adaptation with synchronized transitions */
+/* Banner SVG theme adaptation */
 img[src*="banner.svg"] {
   /* In light mode, keep the original black color */
   filter: none;
@@ -10,7 +10,6 @@ img[src*="banner.svg"] {
   height: auto;
   display: block;
   margin: 1rem auto;
-  transition: filter var(--theme-transition-duration) var(--theme-transition-easing) !important;
 }
 
 /* In dark mode, invert the colors to make black elements visible */
@@ -28,51 +27,4 @@ img[src*="banner.svg"] {
 /* Alternative approach for more precise control using CSS variables */
 .banner-adaptive path {
   fill: var(--darkgray);
-  transition: fill var(--theme-transition-duration) var(--theme-transition-easing) !important;
-}
-
-/* Ensure synchronized transitions for all images and media */
-img, 
-svg,
-video {
-  transition: 
-    filter var(--theme-transition-duration) var(--theme-transition-easing),
-    opacity var(--theme-transition-duration) var(--theme-transition-easing) !important;
-}
-
-/* Synchronized theme transition for specific elements */
-pre,
-code,
-blockquote,
-.callout {
-  transition: 
-    background-color var(--theme-transition-duration) var(--theme-transition-easing),
-    color var(--theme-transition-duration) var(--theme-transition-easing),
-    border-color var(--theme-transition-duration) var(--theme-transition-easing) !important;
-}
-
-/* Synchronized transitions for links and interactive elements */
-a, 
-button,
-input,
-textarea,
-select {
-  transition: 
-    color var(--theme-transition-duration) var(--theme-transition-easing),
-    background-color var(--theme-transition-duration) var(--theme-transition-easing),
-    border-color var(--theme-transition-duration) var(--theme-transition-easing) !important;
-}
-
-/* Force synchronization for any stubborn elements */
-.page-title,
-.article-title,
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6,
-.content p {
-  transition: 
-    color var(--theme-transition-duration) var(--theme-transition-easing) !important;
 }

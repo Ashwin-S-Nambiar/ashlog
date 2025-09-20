@@ -9,49 +9,20 @@ const emitThemeChangeEvent = (theme: "light" | "dark") => {
   document.dispatchEvent(event)
 }
 
-// Add class to prevent transitions on page load
-document.documentElement.classList.add("no-transition")
-window.addEventListener("load", () => {
-  // Remove the no-transition class after a brief delay to enable smooth transitions
-  setTimeout(() => {
-    document.documentElement.classList.remove("no-transition")
-  }, 100)
-})
-
-// Enhanced theme switching with smooth animations
-const switchThemeWithAnimation = async (newTheme: "light" | "dark") => {
-  // Check if View Transitions API is supported for ultra-smooth transitions
-  if (document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const transition = document.startViewTransition(() => {
-      document.documentElement.setAttribute("saved-theme", newTheme)
-      localStorage.setItem("theme", newTheme)
-    })
-    
-    try {
-      await transition.finished
-    } catch (e) {
-      // Fallback if view transition fails
-      console.warn("View transition failed, using fallback:", e)
-    }
-  } else {
-    // Fallback for browsers without View Transitions API
-    document.documentElement.setAttribute("saved-theme", newTheme)
-    localStorage.setItem("theme", newTheme)
-  }
-  
-  emitThemeChangeEvent(newTheme)
-}
-
 document.addEventListener("nav", () => {
   const switchTheme = () => {
-    const currentTheme = document.documentElement.getAttribute("saved-theme")
-    const newTheme = currentTheme === "dark" ? "light" : "dark"
-    switchThemeWithAnimation(newTheme)
+    const newTheme =
+      document.documentElement.getAttribute("saved-theme") === "dark" ? "light" : "dark"
+    document.documentElement.setAttribute("saved-theme", newTheme)
+    localStorage.setItem("theme", newTheme)
+    emitThemeChangeEvent(newTheme)
   }
 
   const themeChange = (e: MediaQueryListEvent) => {
     const newTheme = e.matches ? "dark" : "light"
-    switchThemeWithAnimation(newTheme)
+    document.documentElement.setAttribute("saved-theme", newTheme)
+    localStorage.setItem("theme", newTheme)
+    emitThemeChangeEvent(newTheme)
   }
 
   for (const darkmodeButton of document.getElementsByClassName("darkmode")) {

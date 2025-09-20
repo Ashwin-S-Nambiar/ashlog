@@ -9,102 +9,39 @@
   margin: 0;
   text-align: inherit;
   flex-shrink: 0;
-  border-radius: 50%;
-  transition: 
-    transform 0.15s ease-out,
-    background-color var(--theme-transition-duration) var(--theme-transition-easing);
-
-  &:hover {
-    transform: scale(1.1);
-    background-color: var(--lightgray);
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
 
   & svg {
     position: absolute;
     width: 20px;
     height: 20px;
     top: calc(50% - 10px);
-    left: calc(50% - 10px);
     fill: var(--darkgray);
-    transition: 
-      opacity var(--theme-transition-duration) var(--theme-transition-easing),
-      transform var(--theme-transition-duration) var(--theme-transition-easing),
-      fill var(--theme-transition-duration) var(--theme-transition-easing) !important;
+    transition: opacity 0.1s ease;
   }
-}
-
-/* Synchronized color scheme transitions */
-:root {
-  color-scheme: light;
-  transition: color-scheme var(--theme-transition-duration) var(--theme-transition-easing);
 }
 
 :root[saved-theme="dark"] {
   color-scheme: dark;
 }
 
-/* Synchronized icon transitions for theme switching */
+:root[saved-theme="light"] {
+  color-scheme: light;
+}
+
 :root[saved-theme="dark"] .darkmode {
   & > .dayIcon {
-    opacity: 0;
-    transform: rotate(180deg) scale(0.8);
+    display: none;
   }
   & > .nightIcon {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+    display: inline;
   }
 }
 
 :root .darkmode {
   & > .dayIcon {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+    display: inline;
   }
   & > .nightIcon {
-    opacity: 0;
-    transform: rotate(-180deg) scale(0.8);
-  }
-}
-
-/* Respect user's motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .darkmode {
-    transition: background-color var(--theme-transition-duration) var(--theme-transition-easing);
-    
-    &:hover {
-      transform: none;
-    }
-    
-    &:active {
-      transform: none;
-    }
-    
-    & svg {
-      transition: 
-        opacity var(--theme-transition-duration) var(--theme-transition-easing),
-        fill var(--theme-transition-duration) var(--theme-transition-easing) !important;
-    }
-  }
-  
-  :root[saved-theme="dark"] .darkmode {
-    & > .dayIcon {
-      transform: none;
-    }
-    & > .nightIcon {
-      transform: none;
-    }
-  }
-
-  :root .darkmode {
-    & > .dayIcon {
-      transform: none;
-    }
-    & > .nightIcon {
-      transform: none;
-    }
+    display: none;
   }
 }

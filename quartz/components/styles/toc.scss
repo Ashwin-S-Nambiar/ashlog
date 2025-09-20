@@ -51,8 +51,8 @@ ul.toc-content.overflow {
     color: var(--dark);
     opacity: 0.35;
     transition:
-      var(--theme-transition-duration) var(--theme-transition-easing) opacity,
-      var(--theme-transition-duration) var(--theme-transition-easing) color !important;
+      0.5s ease opacity,
+      0.3s ease color;
     &.in-view {
       opacity: 0.75;
     }
