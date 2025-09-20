@@ -21,7 +21,8 @@ PageTitle.css = `
 }
 
 .page-title {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 600;
   margin: 0;
   font-family: 'Biro Script', var(--titleFont);
 }

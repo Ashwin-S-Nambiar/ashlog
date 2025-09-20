@@ -6,9 +6,10 @@
 
 .content-meta {
   margin-top: 0;
+  font-size: 1.25rem;
   color: var(--darkgray);
   font-family: 'Biro Script', cursive;
-  font-weight: normal;
+  font-weight: 600;
 
   &[show-comma="true"] {
     > *:not(:last-child) {
