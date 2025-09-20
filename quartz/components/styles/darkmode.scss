@@ -23,12 +23,6 @@
     transform: scale(0.95);
   }
 
-  /* Enhanced animation feedback during theme transition */
-  &.transitioning {
-    pointer-events: none;
-    transform: scale(1.05);
-  }
-
   & svg {
     position: absolute;
     width: 20px;
