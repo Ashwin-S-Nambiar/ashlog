@@ -39,9 +39,9 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/QuizzMe)**
 | **Unique IDs** | Nano ID | For keying lists, handling unique identifiers. |
 | **Data API** | [[Open Trivia DB]] | Source of quiz questions. |
 | **HTML Entities Handling** | html-entities package | To decode HTML entity encodings in questions / answers. |
-| **Visual / Animation** | CSS animations / transitions; React-Confetti; theme toggle transitions. |
+| **Visual / Animation** | [[CSS]] animations / transitions; React-Confetti; theme toggle transitions. |
 | **Persistence** | localStorage | For storing theme preference etc. |
-| **Responsive Design** | [[CSS3]] + responsive layouts / breakpoints | For mobile / tablet / desktop usability. |
+| **Responsive Design** | CSS3 + responsive layouts / breakpoints | For mobile / tablet / desktop usability. |
 
 ---
 
