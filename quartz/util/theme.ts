@@ -140,6 +140,50 @@ export async function processGoogleFonts(
   return { processedStylesheet, fontFiles }
 }
 
+// Spaceman-inspired animation utilities
+export interface AnimationConfig {
+  x: number
+  y: number
+  duration: number
+  easing: string
+}
+
+export const supportsViewTransitions = (): boolean => {
+  return typeof window !== 'undefined' && 'startViewTransition' in document
+}
+
+export const prefersReducedMotion = (): boolean => {
+  return typeof window !== 'undefined' && 
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
+export const createCircleAnimation = (config: AnimationConfig): void => {
+  if (typeof window === 'undefined') return
+  
+  const { x, y, duration, easing } = config
+
+  // Calculate the distance to each corner of the viewport
+  const topLeft = Math.hypot(x, y)
+  const topRight = Math.hypot(window.innerWidth - x, y)
+  const bottomLeft = Math.hypot(x, window.innerHeight - y)
+  const bottomRight = Math.hypot(window.innerWidth - x, window.innerHeight - y)
+
+  // Find the maximum distance to ensure animation covers the entire viewport
+  const maxRadius = Math.max(topLeft, topRight, bottomLeft, bottomRight)
+
+  // Create dynamic animation for the specific button position
+  document.documentElement.animate(
+    {
+      clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${maxRadius}px at ${x}px ${y}px)`],
+    },
+    {
+      duration,
+      easing,
+      pseudoElement: '::view-transition-new(root)',
+    }
+  )
+}
+
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {
   return `
 ${stylesheet.join("\n\n")}
@@ -160,9 +204,17 @@ ${stylesheet.join("\n\n")}
   --bodyFont: "${getFontSpecificationName(theme.typography.body)}", ${DEFAULT_SANS_SERIF};
   --codeFont: "${getFontSpecificationName(theme.typography.code)}", ${DEFAULT_MONO};
   
-  /* Synchronized theme transition timing - faster and unified */
-  --theme-transition-duration: 0.2s;
-  --theme-transition-easing: ease-out;
+  /* Spaceman-inspired theme animation settings */
+  --theme-transition-duration: 750ms;
+  --theme-transition-easing: ease-in-out;
+}
+
+/* Spaceman-inspired view transition animations for modern theme switching */
+/* Base styles for smooth view transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
 /* Prevent transitions on page load to avoid flash of unstyled content */
@@ -171,64 +223,12 @@ ${stylesheet.join("\n\n")}
 .no-transition *::before,
 .no-transition *::after {
   transition: none !important;
+  animation: none !important;
   will-change: auto !important;
 }
 
-/* CRITICAL: Override ALL existing transitions to ensure perfect synchronization */
-/* This ensures no element can have different timing that causes flickering */
+/* Synchronized theme transitions for all elements */
 * {
-  transition: 
-    background-color var(--theme-transition-duration) var(--theme-transition-easing),
-    color var(--theme-transition-duration) var(--theme-transition-easing),
-    border-color var(--theme-transition-duration) var(--theme-transition-easing),
-    fill var(--theme-transition-duration) var(--theme-transition-easing),
-    stroke var(--theme-transition-duration) var(--theme-transition-easing),
-    box-shadow var(--theme-transition-duration) var(--theme-transition-easing),
-    filter var(--theme-transition-duration) var(--theme-transition-easing) !important;
-}
-
-/* Specific overrides for elements that might have custom transitions */
-*:not(.darkmode):not(.darkmode *) {
-  transition-duration: var(--theme-transition-duration) !important;
-  transition-timing-function: var(--theme-transition-easing) !important;
-}
-
-/* Synchronized transitions for ALL elements - no staggered effects */
-html {
-  transition: 
-    background-color var(--theme-transition-duration) var(--theme-transition-easing),
-    color var(--theme-transition-duration) var(--theme-transition-easing);
-}
-
-body {
-  transition: 
-    background-color var(--theme-transition-duration) var(--theme-transition-easing),
-    color var(--theme-transition-duration) var(--theme-transition-easing);
-}
-
-/* Unified transitions for all text elements */
-h1, h2, h3, h4, h5, h6,
-p, span, div, a, li, td, th,
-.article-title, .page-title,
-.content, .sidebar, .footer {
-  transition: 
-    color var(--theme-transition-duration) var(--theme-transition-easing),
-    background-color var(--theme-transition-duration) var(--theme-transition-easing),
-    border-color var(--theme-transition-duration) var(--theme-transition-easing) !important;
-}
-
-/* Specific timing for background containers */
-article, main, section, header, footer, nav,
-.page, .content, .container {
-  transition: 
-    background-color var(--theme-transition-duration) var(--theme-transition-easing),
-    border-color var(--theme-transition-duration) var(--theme-transition-easing) !important;
-}
-
-/* Override any existing transitions that might cause timing conflicts */
-*,
-*::before,
-*::after {
   transition: 
     background-color var(--theme-transition-duration) var(--theme-transition-easing),
     color var(--theme-transition-duration) var(--theme-transition-easing),
@@ -238,12 +238,37 @@ article, main, section, header, footer, nav,
     box-shadow var(--theme-transition-duration) var(--theme-transition-easing) !important;
 }
 
-/* Remove any conflicting transitions from specific elements */
-svg, svg *, img {
+/* Enhanced transitions for specific element groups */
+html,
+body {
+  transition: 
+    background-color var(--theme-transition-duration) var(--theme-transition-easing),
+    color var(--theme-transition-duration) var(--theme-transition-easing);
+}
+
+/* Text and interactive elements */
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, li, td, th,
+button, input, textarea, select {
+  transition: 
+    color var(--theme-transition-duration) var(--theme-transition-easing),
+    background-color var(--theme-transition-duration) var(--theme-transition-easing),
+    border-color var(--theme-transition-duration) var(--theme-transition-easing) !important;
+}
+
+/* Layout containers */
+article, main, section, header, footer, nav,
+.page, .content, .container {
+  transition: 
+    background-color var(--theme-transition-duration) var(--theme-transition-easing),
+    border-color var(--theme-transition-duration) var(--theme-transition-easing) !important;
+}
+
+/* SVG and icons */
+svg, svg * {
   transition: 
     fill var(--theme-transition-duration) var(--theme-transition-easing),
-    stroke var(--theme-transition-duration) var(--theme-transition-easing),
-    filter var(--theme-transition-duration) var(--theme-transition-easing) !important;
+    stroke var(--theme-transition-duration) var(--theme-transition-easing) !important;
 }
 
 :root[saved-theme="dark"] {
@@ -258,8 +283,9 @@ svg, svg *, img {
   --textHighlight: ${theme.colors.darkMode.textHighlight};
 }
 
-/* View transitions for modern browsers - ultra-smooth theme switching */
+/* Spaceman-inspired View Transitions API animations for ultra-smooth theme switching */
 @supports (view-transition-name: none) {
+  /* Base view transition configuration */
   ::view-transition-group(root) {
     animation-duration: var(--theme-transition-duration);
     animation-timing-function: var(--theme-transition-easing);
@@ -270,19 +296,73 @@ svg, svg *, img {
     animation-duration: var(--theme-transition-duration);
     animation-timing-function: var(--theme-transition-easing);
   }
+
+  /* Default circle animation for theme transitions */
+  ::view-transition-new(root) {
+    animation-name: theme-circle-in;
+  }
+
+  ::view-transition-old(root) {
+    animation-name: theme-circle-out;
+  }
+}
+
+/* Keyframes for circle animation (will be dynamically overridden by JavaScript) */
+@keyframes theme-circle-in {
+  from {
+    clip-path: circle(0px at var(--circle-x, 50%) var(--circle-y, 50%));
+  }
+  to {
+    clip-path: circle(200vmax at var(--circle-x, 50%) var(--circle-y, 50%));
+  }
+}
+
+@keyframes theme-circle-out {
+  from {
+    clip-path: circle(200vmax at var(--circle-x, 50%) var(--circle-y, 50%));
+  }
+  to {
+    clip-path: circle(0px at var(--circle-x, 50%) var(--circle-y, 50%));
+  }
+}
+
+/* Fallback animation for browsers without View Transitions */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-transitioning {
+    animation: theme-fade var(--theme-transition-duration) var(--theme-transition-easing);
+  }
+}
+
+@keyframes theme-fade {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
 }
 
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   :root {
-    --theme-transition-duration: 0.05s;
+    --theme-transition-duration: 0.1s;
   }
   
   *,
   *::before,
   *::after {
+    transition-duration: 0.1s !important;
+    animation-duration: 0.1s !important;
+  }
+  
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.1s !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  * {
     transition-duration: 0.05s !important;
-    animation-duration: 0.05s !important;
   }
 }
 `
