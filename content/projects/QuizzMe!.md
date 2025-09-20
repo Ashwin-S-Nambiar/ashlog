@@ -5,8 +5,6 @@ date: 2024-09-19
 tags: [projects, react, javascript, portfolio, experiments, quiz-app]
 ---
 
-# QuizzMe!
-
 A quiz-taking platform that fetches questions from [[Open Trivia DB]] and allows users to customize their quiz experience in terms of category, difficulty, type, number of questions. Includes responsive UI, theme toggle, animations, score feedback etc.
 
 ---

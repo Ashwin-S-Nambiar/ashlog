@@ -3,8 +3,6 @@ title: React
 tags: [react, javascript, frontend, ui, library]
 ---
 
-# React
-
 React is an **open-source [[JavaScript]] library** for building user interfaces (UIs), primarily used for **[[Single Page Applications]] (SPAs)**. It is maintained by **Meta (formerly Facebook)** along with a community of individual developers and companies.
 
 ---
