@@ -1,15 +1,6 @@
-@font-face {
-  font-family: 'Biro Script';
-  src: url('./static/BiroScriptUSPlus-Regular.ttf') format('truetype');
-  font-display: swap;
-}
-
 .content-meta {
   margin-top: 0;
-  font-size: 1.25rem;
   color: var(--darkgray);
-  font-family: 'Biro Script', cursive;
-  font-weight: 600;
 
   &[show-comma="true"] {
     > *:not(:last-child) {

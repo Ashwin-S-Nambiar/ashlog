@@ -1,10 +1,11 @@
 ---
-title: "Welcome to AshLog"
-date: 2025-09-19
-description: "Introduction to my personal knowledge base"
+title: "AshLog"
 ---
+<img src="./banner.svg" width="701" height="175">
 
-![Banner](assets/banner.svg)
+```poetry
+Welcome!
+```
 
 AshLog is my **personal knowledge vault**, a place where I collect notes, ideas, and learnings as I grow as a developer.
 
@@ -15,3 +16,7 @@ Unlike polished blog posts, the notes here are often raw, evolving, and intercon
 - Debugging tips and tricky problems I’ve solved
 - [[Projects]], Code snippets, patterns, and reusable references
 - Reflections on my projects and experiments
+
+```poetry
+- Ash
+```
