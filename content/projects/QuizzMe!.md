@@ -1,7 +1,7 @@
 ---
 title: QuizzMe!
 author: Ashwin S. Nambiar
-date: 2024-09-19
+date: 2025-09-20
 tags: [projects, react, javascript, portfolio, experiments, quiz-app]
 ---
 ## Overview

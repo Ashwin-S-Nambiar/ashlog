@@ -2,11 +2,38 @@
 title: Open Trivia DB
 tags: [api, trivia, questions, database, opentdb]
 ---
-**Open Trivia Database (OpenTDB)** is a free-to-use, community-driven API that provides a wide collection of trivia questions across multiple categories and difficulty levels. It is often used to build quiz or trivia-based applications, making it a valuable resource for projects involving [[notes/Web Development]], [[notes/JavaScript]], or [[notes/React]].  
+## Overview
+The **Open Trivia Database (OpenTDB)** is a free, community-maintained trivia question API. It offers thousands of questions across diverse categories (general knowledge, science, history, movies, etc.) and difficulty levels, making it perfect for quiz apps, educational tools, and games.  
 
-Developers can fetch random or filtered trivia questions via its [[REST]] API endpoints, allowing dynamic integration into apps, games, and learning platforms.  
+Docs: [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php)  
 
-**Docs**: [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php)  
+## Features
+- Fetch random trivia questions  
+- Filter questions by category, difficulty, and type (multiple-choice or true/false)  
+- JSON responses for easy integration into apps  
+- Token-based session support to prevent duplicate questions  
+- Community-driven and constantly growing dataset  
+
+## Usage
+### Example: Fetch 10 random questions
+```bash
+GET https://opentdb.com/api.php?amount=10
+```
+### Example: Filtered by category and difficulty
+```bash
+GET https://opentdb.com/api.php?amount=5&category=18&difficulty=medium
+```
+
+## Advantages
+* Completely free and open-source
+* Large, varied question pool
+* No API key required
+* Session tokens help avoid repetition in quizzes
+
+## Limitations
+* Question set depends on community contributions—coverage may vary
+* Some questions/answers may become outdated
+* Limited to trivia/quiz use cases
 
 ## Purpose
-OpenTDB simplifies the process of sourcing quiz content, so developers can focus on building interactive experiences rather than curating large datasets.
+OpenTDB is commonly used to power trivia games, quiz apps, and educational tools. In projects like [[projects/QuizzMe!]], it acts as the main data provider, simplifying quiz creation without requiring developers to manually curate large datasets.

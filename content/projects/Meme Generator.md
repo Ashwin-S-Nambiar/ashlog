@@ -1,7 +1,7 @@
 ---
 title: Meme Generator
 author: Ashwin S. Nambiar
-date: 2024-09-21
+date: 2025-09-19
 tags: [projects, react, javascript, portfolio, experiments, meme-app]
 ---
 ## Overview
