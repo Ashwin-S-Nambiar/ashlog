@@ -17,7 +17,7 @@ Provides elements like `<img>`, `<audio>`, and `<video>` for embedding media dir
 HTML includes a variety of form controls (`<input>`, `<textarea>`, `<select>`, `<button>`) for collecting user input. Forms are often paired with [[notes/JavaScript]] for validation and dynamic behavior.
 ### Hyperlinks and Navigation
 The `<a>` element enables linking between pages, forming the core of the **web’s hypertext system**.
-### Integration with [[notes/CSS]] and [[notes/JavaScript]]
+### Integration with CSS and JavaScript
 - [[notes/CSS]] is used to style and visually format the elements defined in HTML.  
 - [[notes/JavaScript]] manipulates the Document Object Model (DOM) created by HTML, enabling interactivity.  
 
@@ -27,4 +27,4 @@ The `<a>` element enables linking between pages, forming the core of the **web�
 - Simple syntax makes it easy to learn and widely adopted  
 
 ## Purpose
-HTML’s primary role is to define **content and structure**. Combined with [[notes/CSS]] for presentation and [[notesJavaScript]] for behavior, it enables the creation of **dynamic, responsive, and interactive** web applications, including [[notes/Single Page Applications]] built with frameworks like [[notes/React]] and powered by build tools such as [[notes/Vite]].
+HTML’s primary role is to define **content and structure**. Combined with CSS for presentation and JavaScript for behavior, it enables the creation of **dynamic, responsive, and interactive** web applications, including [[notes/Single Page Applications]] built with frameworks like [[notes/React]] and powered by build tools such as [[notes/Vite]].

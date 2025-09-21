@@ -4,7 +4,7 @@ author: Ashwin S. Nambiar
 date: 2024-09-19
 tags: [projects, react, javascript, portfolio, experiments, quiz-app]
 ---
-A quiz-taking platform that fetches questions from [[notes/notes/Open Trivia DB]] and allows users to customize their quiz experience in terms of category, difficulty, type, number of questions. Includes responsive UI, theme toggle, animations, score feedback etc.
+A quiz-taking platform that fetches questions from [[notes/Open Trivia DB]] and allows users to customize their quiz experience in terms of category, difficulty, type, number of questions. Includes responsive UI, theme toggle, animations, score feedback etc.
 ## Overview
 QuizzMe! is a front-end only web app built with React and Vite. Users configure a quiz via multiple options (category, difficulty, number of questions, question type), then answer a set of trivia questions fetched from the Open Trivia DB API. After completing, they receive their score, and perfect scores trigger a confetti animation. The app includes dark / light mode support (persisted), smooth transitions, and checks for API availability before starting a quiz.  
 

@@ -76,6 +76,6 @@ TypeScript integrates deeply with IDEs like VS Code, providing autocompletion, r
 * Reduces bugs through **type safety** and **compile-time checks**
 * Enhances productivity with editor tooling and auto-completion
 * Improves maintainability for large-scale applications
-* Works seamlessly with existing [[notes/JavaScript]] projects
+* Works seamlessly with existing JavaScript projects
 ## Purpose
 TypeScript aims to **make large-scale application development more predictable and robust** by extending JavaScript with static typing and modern programming constructs. It is widely used in frameworks like [[notes/React]] for building reliable [[notes/Single Page Applications]], and integrates smoothly with build tools such as [[notes/Vite]].
