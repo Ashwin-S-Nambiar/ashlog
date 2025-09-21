@@ -1,7 +1,7 @@
 ---
 title: "AshLog"
 ---
-<img src="./banner.svg" width="701" height="175">
+<img src="./assets/banner.svg" width="701" height="175">
 
 ```poetry
 Welcome!
