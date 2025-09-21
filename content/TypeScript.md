@@ -2,13 +2,9 @@
 title: TypeScript
 tags: [typescript, javascript, programming, web, frontend, backend]
 ---
-
 TypeScript is a **statically typed superset of [[JavaScript]]** developed and maintained by Microsoft. It adds optional static typing and modern features to [[JavaScript]], enabling developers to build more reliable, maintainable, and scalable applications.
 
----
-
 ## Key Features
-
 ### Static Typing
 TypeScript allows developers to declare variable and function types for better predictability.
 
@@ -23,18 +19,14 @@ function add(a: number, b: number): number {
   return a + b;
 }
 ````
-
 ### Type Inference
-
 TypeScript can automatically infer types without explicit annotations.
 
 ```typescript
 let count = 10; // inferred as number
 // count = "ten"; Error: Type 'string' is not assignable to type 'number'
 ```
-
 ### Modern \[\[JavaScript]] Support
-
 TypeScript supports the latest ECMAScript features while compiling down to plain \[\[JavaScript]].
 
 ```typescript
@@ -42,9 +34,7 @@ TypeScript supports the latest ECMAScript features while compiling down to plain
 const user = { profile: { name: "Ashwin" } };
 console.log(user?.profile?.name); // "Ashwin"
 ```
-
 ### Interfaces and Types
-
 Interfaces help define contracts for objects, improving maintainability.
 
 ```typescript
@@ -60,9 +50,7 @@ const ashwin: User = {
   isActive: true
 };
 ```
-
 ### Classes and OOP
-
 TypeScript enhances object-oriented programming with features like access modifiers.
 
 ```typescript
@@ -81,22 +69,13 @@ class Person {
 const p = new Person("Ashwin");
 console.log(p.greet()); // Hello, my name is Ashwin
 ```
-
 ### Tooling and Editor Support
-
 TypeScript integrates deeply with IDEs like VS Code, providing autocompletion, refactoring, and error highlighting.
 
----
-
 ## Advantages
-
 * Reduces bugs through **type safety** and **compile-time checks**
 * Enhances productivity with editor tooling and auto-completion
 * Improves maintainability for large-scale applications
 * Works seamlessly with existing [[JavaScript]] projects
-
----
-
 ## Purpose
-
 TypeScript aims to **make large-scale application development more predictable and robust** by extending [[JavaScript]] with static typing and modern programming constructs. It is widely used in frameworks like [[React]] for building reliable [[Single Page Applications]], and integrates smoothly with build tools such as [[Vite]].
