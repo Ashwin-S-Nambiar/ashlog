@@ -2,7 +2,7 @@
 title: CSS
 tags: [css, styling, web, frontend]
 ---
-CSS (**Cascading Style Sheets**) is a style sheet language used to describe the presentation of HTML elements. It is a core web technology, alongside **[[HTML]]** and **[[JavaScript]]**, that controls layout, colors, fonts, and overall visual appearance of web applications.
+CSS (**Cascading Style Sheets**) is a style sheet language used to describe the presentation of HTML elements. It is a core web technology, alongside **[[notes/HTML]]** and **[[notes/JavaScript]]**, that controls layout, colors, fonts, and overall visual appearance of web applications.
 
 ## Key Features
 ### Selectors and Pseudo-Classes

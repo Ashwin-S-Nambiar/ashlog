@@ -24,4 +24,3 @@ These projects embody:
 - **Documentation as learning** - Writing about code clarifies thinking
 - **Embracing imperfection** - Sharing works-in-progress and failures too
 ## Current Projects
-### [[QuizzMe!]

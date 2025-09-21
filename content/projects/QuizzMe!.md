@@ -4,7 +4,7 @@ author: Ashwin S. Nambiar
 date: 2024-09-19
 tags: [projects, react, javascript, portfolio, experiments, quiz-app]
 ---
-A quiz-taking platform that fetches questions from [[Open Trivia DB]] and allows users to customize their quiz experience in terms of category, difficulty, type, number of questions. Includes responsive UI, theme toggle, animations, score feedback etc.
+A quiz-taking platform that fetches questions from [[notes/notes/Open Trivia DB]] and allows users to customize their quiz experience in terms of category, difficulty, type, number of questions. Includes responsive UI, theme toggle, animations, score feedback etc.
 ## Overview
 QuizzMe! is a front-end only web app built with React and Vite. Users configure a quiz via multiple options (category, difficulty, number of questions, question type), then answer a set of trivia questions fetched from the Open Trivia DB API. After completing, they receive their score, and perfect scores trigger a confetti animation. The app includes dark / light mode support (persisted), smooth transitions, and checks for API availability before starting a quiz.  
 
@@ -22,12 +22,12 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/QuizzMe)**
 
 | Layer                      | Technology / Library                                                        | Purpose                                                 |
 | -------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Framework / Build**      | [[React]], [[Vite]]                                                         | Component-based UI, fast dev server & build speeds.     |
+| **Framework / Build**      | [[notes/React]], [[notes/Vite]]                                                         | Component-based UI, fast dev server & build speeds.     |
 | **State / Hooks**          | Built-in React state & hooks, plus **React-Use** for custom reusable hooks. |                                                         |
 | **Unique IDs**             | Nano ID                                                                     | For keying lists, handling unique identifiers.          |
-| **Data API**               | [[Open Trivia DB]]                                                          | Source of quiz questions.                               |
+| **Data API**               | [[notes/Open Trivia DB]]                                                          | Source of quiz questions.                               |
 | **HTML Entities Handling** | html-entities package                                                       | To decode HTML entity encodings in questions / answers. |
-| **Visual / Animation**     | [[CSS]] animations / transitions; React-Confetti; theme toggle transitions. |                                                         |
+| **Visual / Animation**     | [[notes/CSS]] animations / transitions; React-Confetti; theme toggle transitions. |                                                         |
 | **Persistence**            | localStorage                                                                | For storing theme preference etc.                       |
 | **Responsive Design**      | CSS3 + responsive layouts / breakpoints                                     | For mobile / tablet / desktop usability.                |
 

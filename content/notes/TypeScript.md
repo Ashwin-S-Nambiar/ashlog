@@ -2,7 +2,7 @@
 title: TypeScript
 tags: [typescript, javascript, programming, web, frontend, backend]
 ---
-TypeScript is a **statically typed superset of [[JavaScript]]** developed and maintained by Microsoft. It adds optional static typing and modern features to [[JavaScript]], enabling developers to build more reliable, maintainable, and scalable applications.
+TypeScript is a **statically typed superset of [[notes/JavaScript]]** developed and maintained by Microsoft. It adds optional static typing and modern features to JavaScript, enabling developers to build more reliable, maintainable, and scalable applications.
 
 ## Key Features
 ### Static Typing
@@ -26,8 +26,8 @@ TypeScript can automatically infer types without explicit annotations.
 let count = 10; // inferred as number
 // count = "ten"; Error: Type 'string' is not assignable to type 'number'
 ```
-### Modern \[\[JavaScript]] Support
-TypeScript supports the latest ECMAScript features while compiling down to plain \[\[JavaScript]].
+### Modern JavaScript Support
+TypeScript supports the latest ECMAScript features while compiling down to plain JavaScript.
 
 ```typescript
 // Using optional chaining (modern JavaScript feature)
@@ -76,6 +76,6 @@ TypeScript integrates deeply with IDEs like VS Code, providing autocompletion, r
 * Reduces bugs through **type safety** and **compile-time checks**
 * Enhances productivity with editor tooling and auto-completion
 * Improves maintainability for large-scale applications
-* Works seamlessly with existing [[JavaScript]] projects
+* Works seamlessly with existing [[notes/JavaScript]] projects
 ## Purpose
-TypeScript aims to **make large-scale application development more predictable and robust** by extending [[JavaScript]] with static typing and modern programming constructs. It is widely used in frameworks like [[React]] for building reliable [[Single Page Applications]], and integrates smoothly with build tools such as [[Vite]].
+TypeScript aims to **make large-scale application development more predictable and robust** by extending JavaScript with static typing and modern programming constructs. It is widely used in frameworks like [[notes/React]] for building reliable [[notes/Single Page Applications]], and integrates smoothly with build tools such as [[notes/Vite]].

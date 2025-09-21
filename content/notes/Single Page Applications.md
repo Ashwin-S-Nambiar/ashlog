@@ -2,7 +2,7 @@
 title: Single Page Applications
 tags: [spa, web, javascript, frontend, architecture]
 ---
-A **Single Page Application (SPA)** is a web application that loads a single HTML page and dynamically updates its content using [[JavaScript]], without requiring a full page reload.
+A **Single Page Application (SPA)** is a web application that loads a single HTML page and dynamically updates its content using [[notes/JavaScript]], without requiring a full page reload.
 
 ## Key Characteristics
 ### Dynamic Content Loading
@@ -10,9 +10,9 @@ SPAs fetch and render content asynchronously, avoiding full page reloads.
 ### Routing
 Client-side routing enables seamless navigation within the application without server round trips.
 ### API-Driven
-SPAs typically rely on APIs (often [[REST]] or [[GraphQL]]) to fetch and send data.
+SPAs typically rely on APIs (often [[notes/REST]] or [[notes/GraphQL]]) to fetch and send data.
 ### State Management
-SPAs maintain application state on the client side, often using libraries such as **[[Redux]]**, **[[Zustand]]**, or **MobX**.
+SPAs maintain application state on the client side, often using libraries such as **[[Redux]]**, **[[notes/Zustand]]**, or **MobX**.
 
 ## Advantages
 - Faster navigation and improved user experience  

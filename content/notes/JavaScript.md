@@ -2,7 +2,7 @@
 title: JavaScript
 tags: [javascript, programming, web, frontend, backend]
 ---
-JavaScript is a **high-level, interpreted programming language** primarily used to add interactivity and dynamic behavior to websites. It is one of the core technologies of the web, alongside **[[HTML]]** and **[[CSS]]**, and is supported by all modern browsers.
+JavaScript is a **high-level, interpreted programming language** primarily used to add interactivity and dynamic behavior to websites. It is one of the core technologies of the web, alongside **[[notes/HTML]]** and **[[notes/CSS]]**, and is supported by all modern browsers.
 
 ## Key Features
 ### Dynamic Typing
