@@ -5,7 +5,7 @@ date: 2025-09-20
 tags: [projects, react, javascript, portfolio, experiments, quiz-app]
 ---
 ## Overview
-QuizzMe! is a front-end only web app built with [[notes/React]] and [[notes/Vite]]. Users configure a quiz via multiple options (category, difficulty, number of questions, question type), then answer a set of trivia questions fetched from the [[notes/Open Trivia DB]] API. After completing, they receive their score, and perfect scores trigger a confetti animation. The app includes dark / light mode support (persisted), smooth transitions, and checks for [[notes/API]] availability before starting a quiz.  
+QuizzMe! is a front-end only web app built with [[notes/React]] and [[notes/Vite]]. Users configure a quiz via multiple options (category, difficulty, number of questions, question type), then answer a set of trivia questions fetched from the [[notes/Public APIs/Open Trivia DB]] API. After completing, they receive their score, and perfect scores trigger a confetti animation. The app includes dark / light mode support (persisted), smooth transitions, and checks for [[notes/API]] availability before starting a quiz.  
 
 Live: **[quizzme.ashwin.co.in](https://quizzme.ashwin.co.in)**  
 Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/QuizzMe)**

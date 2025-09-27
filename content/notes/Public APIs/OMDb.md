@@ -3,7 +3,7 @@ title: OMDb
 tags: [api, movies, web, javascript, projects]
 ---
 ## Overview
-The OMDb API allows developers to query a large database of movie and TV data, making it easy to build applications such as watchlists, review sites, and recommendation systems. It returns structured data in JSON format, which can be consumed directly by [[notes/JavaScript]] applications and frameworks like [[notes/React]].  
+The OMDb API is a [[notes/Public APIs|public api]] allows developers to query a large database of movie and TV data, making it easy to build applications such as watchlists, review sites, and recommendation systems. It returns structured data in JSON format, which can be consumed directly by [[notes/JavaScript]] applications and frameworks like [[notes/React]].  
 
 Website: [https://www.omdbapi.com/](https://www.omdbapi.com/)  
 

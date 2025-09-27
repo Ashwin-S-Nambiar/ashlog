@@ -3,7 +3,7 @@ title: Open Trivia DB
 tags: [api, trivia, questions, database, opentdb]
 ---
 ## Overview
-The **Open Trivia Database (OpenTDB)** is a free, community-maintained trivia question API. It offers thousands of questions across diverse categories (general knowledge, science, history, movies, etc.) and difficulty levels, making it perfect for quiz apps, educational tools, and games.  
+The **Open Trivia Database (OpenTDB)** is a free, community-maintained and [[notes/Public APIs|public]] trivia question API. It offers thousands of questions across diverse categories (general knowledge, science, history, movies, etc.) and difficulty levels, making it perfect for quiz apps, educational tools, and games.  
 
 Docs: [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php)  
 
@@ -31,7 +31,7 @@ GET https://opentdb.com/api.php?amount=5&category=18&difficulty=medium
 * Session tokens help avoid repetition in quizzes
 
 ## Limitations
-* Question set depends on community contributions—coverage may vary
+* Question set depends on community contributions and coverage may vary
 * Some questions/answers may become outdated
 * Limited to trivia/quiz use cases
 

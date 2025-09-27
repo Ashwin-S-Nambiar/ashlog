@@ -7,7 +7,7 @@ tags: [projects, nextjs, react, javascript, portfolio, experiments, blog-app]
 ## Overview
 Quillify is a blogging web application that allows users to register, log in, and create blog posts with a WYSIWYG editor. It features secure authentication with [[notes/JWT]] and bcrypt, supports an admin panel for managing blogs and subscriptions, and offers responsive design optimized for all devices. As a full-stack project, it demonstrates integration of modern frontend frameworks, backend logic, and database persistence within [[notes/Web Development]].
 
-Live: **[quillify.ashwin.co.in](https://quillify.ashwin.co.in/)**  
+Live: **[quillify.ashwin.co.in](https://quillify.ashwin.co.in)**  
 Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/Quillify)** 
 
 ## Goals & Problems Solved

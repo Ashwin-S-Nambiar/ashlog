@@ -3,7 +3,7 @@ title: Imgflip
 tags: [api, memes, imgflip, rest]
 ---
 ## Overview
-The **Imgflip API** is a [[notes/REST]]ful JSON API that enables developers to integrate meme generation and template retrieval directly into applications. It provides endpoints to fetch popular meme templates, caption images or GIFs, and even generate AI-based memes. This makes it ideal for apps or projects centered around humor, memes, or user-generated content.  
+The **Imgflip API** is a [[notes/REST]]ful [[notes/Public APIs|public]] JSON API that enables developers to integrate meme generation and template retrieval directly into applications. It provides endpoints to fetch popular meme templates, caption images or GIFs, and even generate AI-based memes. This makes it ideal for apps or projects centered around humor, memes, or user-generated content.  
 
 Website: [https://imgflip.com/api](https://imgflip.com/api)  
 
@@ -41,7 +41,7 @@ POST https://api.imgflip.com/caption_image
 ## Limitations
 * Many advanced endpoints (search, AI meme, automeme, GIFs) are **premium only**
 * Generated memes are **publicly accessible**; no private option
-* Content is not curated—filtering may be necessary for safe apps
+* Content is not curated filtering may be necessary for safe apps
 * Free tier can be throttled if abused
 
 ## Pricing
