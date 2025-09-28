@@ -42,4 +42,4 @@ https://www.thecolorapi.com/scheme?hex=0047AB&mode=triad&count=5
 ## Integration
 * Can be used in JavaScript projects with `fetch()` or Axios.
 * Commonly applied in design tools, palette generators, and educational projects.
-* Easily connects with frontend frameworks such as [[notes/React]] or [[notes/Next.js]].
+* Easily connects with frontend frameworks such as [[notes/Tech Stack/React]] or [[notes/Tech Stack/Next.js]].

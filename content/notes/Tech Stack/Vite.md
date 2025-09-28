@@ -12,11 +12,11 @@ Vite is a **next-generation frontend build tool** that provides a faster and lea
 - Uses **Rollup** under the hood for production builds.  
 - Automatically optimizes assets for smaller bundle sizes.  
 ### Framework Agnostic
-While originally associated with Vue.js, Vite supports frameworks like **[[notes/React]]**, **[[notes/Svelte]]**, and **Preact**.
+While originally associated with Vue.js, Vite supports frameworks like **[[notes/Tech Stack/React]]**, **[[notes/Tech Stack/Svelte]]**, and **Preact**.
 ### Rich Plugin Ecosystem
 Supports a growing ecosystem of plugins for extending functionality (e.g., TypeScript, JSX, [[notes/Linting|linting]], testing).
 ### Modern JavaScript Support
-Out-of-the-box support for [[notes/TypeScript]], JSX, [[notes/CSS]], and more.
+Out-of-the-box support for [[notes/Tech Stack/TypeScript]], JSX, [[notes/Tech Stack/CSS]], and more.
 
 ## Advantages
 - Faster cold starts and builds compared to older tools like Webpack  

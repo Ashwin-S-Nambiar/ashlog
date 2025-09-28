@@ -12,7 +12,7 @@ AshLog is my **personal knowledge vault**, a place where I collect notes, ideas,
 Unlike polished blog posts, the notes here are often raw, evolving, and interconnected more like a **digital garden** than a traditional blog.
 
 ## What you’ll find here
-- [[notes/index.md|Notes]] on technologies I’m learning ([[notes/Web Development]], [[notes/Next.js]], [[notes/React]] Azure, etc.)
+- [[notes/index.md|Notes]] on technologies I’m learning ([[notes/Web Development]], [[notes/Tech Stack/Next.js]], [[notes/Tech Stack/React]] Azure, etc.)
 - Debugging tips and tricky problems I’ve solved
 - [[projects/index|Projects]], Code snippets, patterns, and reusable references
 - Reflections on my projects and experiments

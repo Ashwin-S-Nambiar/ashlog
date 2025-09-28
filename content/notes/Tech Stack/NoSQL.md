@@ -7,7 +7,7 @@ tags: [nosql, database, web, backend, data]
 ## Characteristics
 - **Schema-less or flexible schema**: No predefined structure is required.  
 - **Horizontal scalability**: Designed for distributed clusters and large-scale applications.  
-- **Data Models**: Document-oriented (e.g., [[notes/MongoDB]]), key-value, graph, or wide-column.  
+- **Data Models**: Document-oriented (e.g., [[notes/Tech Stack/MongoDB]]), key-value, graph, or wide-column.  
 - **High performance**: Optimized for read/write-heavy applications.  
 
 ## Advantages
@@ -17,7 +17,7 @@ tags: [nosql, database, web, backend, data]
 - Ideal for applications like social media platforms, blogs, or real-time analytics.  
 
 ## Limitations
-- Weaker support for complex joins and transactions compared to SQL.  
+- Weaker support for complex joins and transactions compared to [[notes/Tech Stack/SQL]].  
 - Data consistency can vary depending on database type (eventual consistency).  
 - Requires careful planning to avoid unstructured, inconsistent data.  
 

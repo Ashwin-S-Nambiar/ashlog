@@ -20,9 +20,9 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/meme-generator)**
 ## Architecture & Tech Stack
 | Layer                 | Technology / Library            | Purpose                                              |
 | --------------------- | ------------------------------- | ---------------------------------------------------- |
-| **Framework / Build** | [[notes/React]], [[notes/Vite]] | Component-based UI, fast dev server & optimized build |
-| **Styling**           | [[notes/CSS]]                   | Layout, responsive design, and styling               |
-| **Logic**             | [[notes/JavaScript]]            | State management, DOM manipulation, and interactivity |
+| **Framework / Build** | [[notes/Tech Stack/React]], [[notes/Tech Stack/Vite]] | Component-based UI, fast dev server & optimized build |
+| **Styling**           | [[notes/Tech Stack/CSS]]                   | Layout, responsive design, and styling               |
+| **Logic**             | [[notes/Tech Stack/JavaScript]]            | State management, DOM manipulation, and interactivity |
 | **Data API**          | Imgflip                     | Provides meme template data                          |
 
 ## Key Features & UX Flow

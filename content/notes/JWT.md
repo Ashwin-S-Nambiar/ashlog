@@ -2,7 +2,7 @@
 title: JWT
 tags: [jwt, authentication, security, web, token]
 ---
-**JWT (JSON Web Token)** is an open standard (RFC 7519) used for securely transmitting information between parties as a JSON object. It is compact, URL-safe, and commonly used for authentication in [[notes/Web Development]] applications built with [[notes/JavaScript]].
+**JWT (JSON Web Token)** is an open standard (RFC 7519) used for securely transmitting information between parties as a JSON object. It is compact, URL-safe, and commonly used for authentication in [[notes/Web Development]] applications built with [[notes/Tech Stack/JavaScript]].
 
 ## Structure
 A JWT consists of three parts, separated by dots (`.`):  
@@ -25,4 +25,4 @@ A JWT consists of three parts, separated by dots (`.`):
 - Revocation is difficult without additional infrastructure.  
 
 ## Purpose
-JWT simplifies **authentication and authorization** workflows in modern applications, making it a popular choice for APIs, [[notes/Next.js]] backends, and single-page applications like Quillify.
+JWT simplifies **authentication and authorization** workflows in modern applications, making it a popular choice for APIs, [[notes/Tech Stack/Next.js]] backends, and single-page applications like Quillify.

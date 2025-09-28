@@ -18,8 +18,8 @@ tags: [sql, database, relational, web, backend, data]
 
 ## Limitations
 - Less flexible for unstructured or rapidly changing data.  
-- Scaling horizontally can be complex compared to [[notes/NoSQL]].  
+- Scaling horizontally can be complex compared to [[notes/Tech Stack/NoSQL]].  
 - Requires predefined schema before storing data.  
 
 ## Purpose
-SQL databases are best suited for **structured data and transactional applications**, such as banking systems, e-commerce platforms, and enterprise software. They are a core pillar of [[notes/Web Development]] alongside [[notes/NoSQL]] for modern database architectures.
+SQL databases are best suited for **structured data and transactional applications**, such as banking systems, e-commerce platforms, and enterprise software. They are a core pillar of [[notes/Web Development]] alongside NoSQL for modern database architectures.

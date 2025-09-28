@@ -7,4 +7,4 @@ tags: [api, public, free, projects]
 
 Public APIs are particularly useful in projects where developers want quick access to structured data or services without building them from scratch.  
 
-## Some Public APIs Used in My Projects
+## Public APIs Used in My Projects

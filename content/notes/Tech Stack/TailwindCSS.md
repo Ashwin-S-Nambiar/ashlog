@@ -2,7 +2,7 @@
 title: TailwindCSS
 tags: [css, tailwind, framework, styling, frontend]
 ---
-**TailwindCSS** is an utility first [[notes/CSS]] framework that provides low level utility classes to build custom designs directly in markup. Instead of writing custom CSS, developers compose classes to control layout, spacing, typography, colors, and more.
+**TailwindCSS** is an utility first [[notes/Tech Stack/CSS]] framework that provides low level utility classes to build custom designs directly in markup. Instead of writing custom CSS, developers compose classes to control layout, spacing, typography, colors, and more.
 
 ## Key Features
 ### Utility-First Approach
@@ -21,7 +21,7 @@ tags: [css, tailwind, framework, styling, frontend]
 - Results in smaller production builds  
 
 ### Integration
-- Works seamlessly with modern frameworks like [[notes/React]], [[notes/Next.js]], and build tools like [[notes/Vite]]  
+- Works seamlessly with modern frameworks like [[notes/Tech Stack/React]], [[notes/Tech Stack/Next.js]], and build tools like [[notes/Tech Stack/Vite]]  
 
 ## Advantages
 - Rapid development without context switching between HTML and CSS files  

@@ -21,9 +21,9 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/Quillify)**
 ## Architecture & Tech Stack
 | Layer                 | Technology / Library     | Purpose                                                     |
 | --------------------- | ------------------------ | ----------------------------------------------------------- |
-| **Framework / Build** | [[notes/Next.js]], [[notes/React]], [[notes/JavaScript]] | Core frontend and backend framework for rendering and routing |
-| **Styling**           | [[notes/TailwindCSS]], [[notes/CSS]] | Utility-first responsive styling and layout                 |
-| **Database**          | [[notes/MongoDB]]                  | NoSQL database for flexible data storage                    |
+| **Framework / Build** | [[notes/Tech Stack/Next.js]], [[notes/Tech Stack/React]], [[notes/Tech Stack/JavaScript]] | Core frontend and backend framework for rendering and routing |
+| **Styling**           | [[notes/Tech Stack/TailwindCSS]], [[notes/Tech Stack/CSS]] | Utility-first responsive styling and layout                 |
+| **Database**          | [[notes/Tech Stack/MongoDB]]                  | NoSQL database for flexible data storage                    |
 | **Authentication**    | JWT, bcryptjs            | Secure login, registration, and password encryption         |
 | **Hosting**           | Vercel                   | Deployment and continuous delivery platform                 |
 
@@ -65,7 +65,7 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/Quillify)**
 ## Challenges & Learnings
 - Implementing secure authentication workflows with JWT and bcrypt.  
 - Designing a database schema in MongoDB that balances flexibility with performance.  
-- Integrating a WYSIWYG editor with [[notes/React]] while maintaining data consistency.  
+- Integrating a WYSIWYG editor with React while maintaining data consistency.  
 - Building an admin panel that is functional yet simple to navigate.  
 - Ensuring responsive layouts scale properly across devices.  
 

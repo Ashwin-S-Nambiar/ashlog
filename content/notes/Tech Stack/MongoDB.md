@@ -2,11 +2,11 @@
 title: MongoDB
 tags: [mongodb, database, nosql, backend, web]
 ---
-**MongoDB** is a popular **[[notes/NoSQL]] database** that stores data in flexible, JSON-like documents. It is widely used in [[notes/Web Development]] projects that require scalability, high availability, and quick iteration cycles.  
+**MongoDB** is a popular **[[notes/Tech Stack/NoSQL]] database** that stores data in flexible, JSON-like documents. It is widely used in [[notes/Web Development]] projects that require scalability, high availability, and quick iteration cycles.  
 
 Website: [https://www.mongodb.com/](https://www.mongodb.com/)  
 
-Unlike relational databases that use tables and rows, MongoDB uses **collections and documents**. Each document is a flexible schema object expressed in BSON (Binary JSON), making it highly adaptable for projects built with [[notes/JavaScript]] frameworks like [[notes/Next.js]] and [[notes/React]].  
+Unlike relational databases that use tables and rows, MongoDB uses **collections and documents**. Each document is a flexible schema object expressed in BSON (Binary JSON), making it highly adaptable for projects built with [[notes/Tech Stack/JavaScript]] frameworks like [[notes/Tech Stack/Next.js]] and [[notes/Tech Stack/React]].  
 
 ## Features
 - **Schema Flexibility**: No enforced schema allows rapid development and changes.  
@@ -46,7 +46,7 @@ const result = await posts.insertOne({
 ## Advantages
 * Fast iteration due to schema flexibility
 * Scales easily with sharding and clustering
-* Works seamlessly with \[\[notes/JavaScript]] applications
+* Works seamlessly with [[notes/Tech Stack/JavaScript]] applications
 * JSON/BSON structure maps directly to application objects
 
 ## Limitations
@@ -55,4 +55,4 @@ const result = await posts.insertOne({
 * Schema flexibility can lead to inconsistent data if not managed carefully
 
 ## Purpose
-MongoDB is ideal for **modern, agile application development** where requirements evolve quickly. In projects like *Quillify*, it provides flexible storage for user accounts, blog posts, and subscriptions while integrating smoothly with \[\[notes/Next.js]] APIs and authentication workflows.
+MongoDB is ideal for **modern, agile application development** where requirements evolve quickly. In projects like *Quillify*, it provides flexible storage for user accounts, blog posts, and subscriptions while integrating smoothly with Next.js APIs and authentication workflows.

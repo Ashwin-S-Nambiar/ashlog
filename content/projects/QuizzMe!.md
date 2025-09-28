@@ -5,7 +5,7 @@ date: 2025-09-20
 tags: [projects, react, javascript, portfolio, experiments, quiz-app]
 ---
 ## Overview
-QuizzMe! is a front-end only web app built with [[notes/React]] and [[notes/Vite]]. Users configure a quiz via multiple options (category, difficulty, number of questions, question type), then answer a set of trivia questions fetched from the [[notes/Public APIs/Open Trivia DB]] API. After completing, they receive their score, and perfect scores trigger a confetti animation. The app includes dark / light mode support (persisted), smooth transitions, and checks for [[notes/API]] availability before starting a quiz.  
+QuizzMe! is a front-end only web app built with [[notes/Tech Stack/React]] and [[notes/Tech Stack/Vite]]. Users configure a quiz via multiple options (category, difficulty, number of questions, question type), then answer a set of trivia questions fetched from the [[notes/Public APIs/Open Trivia DB]] API. After completing, they receive their score, and perfect scores trigger a confetti animation. The app includes dark / light mode support (persisted), smooth transitions, and checks for [[notes/API]] availability before starting a quiz.  
 
 Live: **[quizzme.ashwin.co.in](https://quizzme.ashwin.co.in)**  
 Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/QuizzMe)**
@@ -26,7 +26,7 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/QuizzMe)**
 | **Unique IDs**             | Nano ID                                                                     | For keying lists, handling unique identifiers.          |
 | **Data API**               | Open Trivia DB                                                         | Source of quiz questions.                               |
 | **HTML Entities Handling** | html-entities package                                                       | To decode HTML entity encodings in questions / answers. |
-| **Visual / Animation**     | [[notes/CSS]] animations / transitions; React-Confetti; theme toggle transitions. |                                                         |
+| **Visual / Animation**     | [[notes/Tech Stack/CSS]] animations / transitions; React-Confetti; theme toggle transitions. |                                                         |
 | **Persistence**            | localStorage                                                                | For storing theme preference etc.                       |
 | **Responsive Design**      | CSS3 + responsive layouts / breakpoints                                     | For mobile / tablet / desktop usability.                |
 

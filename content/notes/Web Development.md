@@ -4,18 +4,18 @@ tags: [web, frontend, backend, fullstack, development]
 ---
 **Web Development** is the process of building and maintaining websites and web applications that run on the internet. It involves a combination of **frontend development**, **backend development**, and supporting tools or workflows that connect the two.  
 
-At its foundation, web development relies on the triad of [[notes/HTML]], [[notes/CSS]], and [[notes/JavaScript]], extended with modern frameworks, build tools, and deployment workflows.  
+At its foundation, web development relies on the triad of [[notes/Tech Stack/HTML]], [[notes/Tech Stack/CSS]], and [[notes/Tech Stack/JavaScript]], extended with modern frameworks, build tools, and deployment workflows.  
 
 ## Core Areas
 ### Frontend Development
 The **client-side** portion of web development that focuses on what users see and interact with.  
 - Built with HTML for structure, CSS for styling, and JavaScript for interactivity  
-- Often uses frameworks like [[notes/React]] to create [[notes/Single Page Applications]]  
-- Build tools like [[notes/Vite]] speed up development and optimize production builds  
+- Often uses frameworks like [[notes/Tech Stack/React]] to create [[notes/Single Page Applications]]  
+- Build tools like [[notes/Tech Stack/Vite]] speed up development and optimize production builds  
 ### Backend Development
 The **server-side** portion that manages data, authentication, APIs, and business logic.  
 - Can be written in languages like Python, Node.js, Java, Ruby, or PHP  
-- Databases (SQL or NoSQL) handle persistent storage  
+- Databases ([[notes/Tech Stack/SQL]] or [[notes/Tech Stack/NoSQL]]) handle persistent storage  
 - REST or GraphQL APIs often connect frontend and backend  
 ### Full-Stack Development
 Refers to working with both frontend and backend technologies, often combining tools like React (frontend) with Node.js + Express (backend).  
@@ -42,4 +42,4 @@ Tools like GitHub Actions, Vercel, or Netlify automate deployment pipelines (CI/
 - Build tools like Vite for efficient development workflows
 
 ## Purpose
-Web Development aims to build applications that are **functional, user-friendly, secure, and scalable**. From static websites to large-scale dynamic applications, it combines design, logic, and infrastructure to bring ideas to life on the internet.
+Web Development aims to build applications that are **functional, user-friendly, secure, and scalable**. From static websites to large scale dynamic applications, it combines design, logic, and infrastructure to bring ideas to life on the internet.

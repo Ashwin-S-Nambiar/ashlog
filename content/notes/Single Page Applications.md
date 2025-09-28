@@ -2,7 +2,7 @@
 title: Single Page Applications
 tags: [spa, web, javascript, frontend, architecture]
 ---
-A **Single Page Application (SPA)** is a web application that loads a single HTML page and dynamically updates its content using [[notes/JavaScript]], without requiring a full page reload.
+A **Single Page Application (SPA)** is a web application that loads a single HTML page and dynamically updates its content using [[notes/Tech Stack/JavaScript]], without requiring a full page reload.
 
 ## Key Characteristics
 ### Dynamic Content Loading

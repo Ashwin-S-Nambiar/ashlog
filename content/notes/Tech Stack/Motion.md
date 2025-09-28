@@ -2,7 +2,7 @@
 title: Motion
 tags: [animation, react, frontend, motion, ui]
 ---
-**Motion (previously as Framer Motion)** is a production ready animation and gesture library for [[notes/React]]. It provides a declarative API for creating smooth, complex animations with minimal code.
+**Motion (previously as Framer Motion)** is a production ready animation and gesture library for [[notes/Tech Stack/React]]. It provides a declarative API for creating smooth, complex animations with minimal code.
 
 ## Key Features
 ### Declarative Animations
@@ -18,12 +18,12 @@ tags: [animation, react, frontend, motion, ui]
 - Animate layout changes automatically using `layout` prop  
 - Useful for dynamic interfaces such as lists, grids, or watchlists  
 ### Integration
-- Works seamlessly with [[notes/React]] and styling systems like [[notes/CSS]] or [[notes/TailwindCSS]]  
-- Often used in projects built with [[notes/Vite]] or [[notes/Next.js]]  
+- Works seamlessly with React and styling systems like [[notes/Tech Stack/CSS]] or [[notes/Tech Stack/TailwindCSS]]  
+- Often used in projects built with [[notes/Tech Stack/Vite]] or [[notes/Tech Stack/Next.js]]  
 
 ## Advantages
 - High-performance animations without requiring deep CSS or SVG knowledge  
-- Intuitive API designed for developers already familiar with [[notes/React]]  
+- Intuitive API designed for developers already familiar with React  
 - Declarative and composable motion patterns  
 
 ## Purpose

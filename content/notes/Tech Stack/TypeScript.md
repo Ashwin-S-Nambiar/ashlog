@@ -2,7 +2,7 @@
 title: TypeScript
 tags: [typescript, javascript, programming, web, frontend, backend]
 ---
-TypeScript is a **statically typed superset of [[notes/JavaScript]]** developed and maintained by Microsoft. It adds optional static typing and modern features to JavaScript, enabling developers to build more reliable, maintainable, and scalable applications.
+TypeScript is a **statically typed superset of [[notes/Tech Stack/JavaScript]]** developed and maintained by Microsoft. It adds optional static typing and modern features to JavaScript, enabling developers to build more reliable, maintainable, and scalable applications.
 
 ## Key Features
 ### Static Typing
@@ -78,4 +78,4 @@ TypeScript integrates deeply with IDEs like VS Code, providing autocompletion, r
 * Improves maintainability for large-scale applications
 * Works seamlessly with existing JavaScript projects
 ## Purpose
-TypeScript aims to **make large-scale application development more predictable and robust** by extending JavaScript with static typing and modern programming constructs. It is widely used in frameworks like [[notes/React]] for building reliable [[notes/Single Page Applications]], and integrates smoothly with build tools such as [[notes/Vite]].
+TypeScript aims to **make large-scale application development more predictable and robust** by extending JavaScript with static typing and modern programming constructs. It is widely used in frameworks like [[notes/Tech Stack/React]] for building reliable [[notes/Single Page Applications]], and integrates smoothly with build tools such as [[notes/Tech Stack/Vite]].

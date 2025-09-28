@@ -21,7 +21,7 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/color-scheme-generat
 ## Architecture & Tech Stack
 | Layer                 | Technology / Library     | Purpose                                         |
 | --------------------- | ------------------------ | ----------------------------------------------- |
-| **Frontend**          | [[notes/HTML]], [[notes/CSS]], [[notes/JavaScript]] | Structure, styling, and interactivity            |
+| **Frontend**          | [[notes/Tech Stack/HTML]], [[notes/Tech Stack/CSS]], [[notes/Tech Stack/JavaScript]] | Structure, styling, and interactivity            |
 | **API**               | Color API      | Generate color schemes and harmony modes         |
 | **Hosting**           | Vercel                   | Deployment and live hosting                      |
 

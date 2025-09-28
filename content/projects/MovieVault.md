@@ -5,7 +5,7 @@ date: 2025-09-21
 tags: [projects, react, javascript, portfolio, experiments, movie-app]
 ---
 ## Overview
-MovieVault is a front-end web application designed to make it easier for users to discover movies, view details, and maintain a personal watchlist. By leveraging the [[notes/Public APIs/OMDb]] API, the app provides access to movie plots, release years, genres, and other metadata. Smooth animations powered by [[notes/Motion]] (previously as **Framer Motion**), along with responsive design via [[notes/TailwindCSS]], deliver a polished and engaging user experience.  
+MovieVault is a front-end web application designed to make it easier for users to discover movies, view details, and maintain a personal watchlist. By leveraging the [[notes/Public APIs/OMDb]] API, the app provides access to movie plots, release years, genres, and other metadata. Smooth animations powered by [[notes/Tech Stack/Motion]] (previously as **Framer Motion**), along with responsive design via [[notes/Tech Stack/TailwindCSS]], deliver a polished and engaging user experience.  
 
 Live: **[movie-watchlist.ashwin.co.in](https://movie-watchlist.ashwin.co.in)**  
 Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/MovieVault)**  
@@ -20,11 +20,11 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 ## Architecture & Tech Stack
 | Layer                 | Technology / Library            | Purpose                                                     |
 | --------------------- | ------------------------------- | ----------------------------------------------------------- |
-| **Framework / Build** | [[notes/React]], [[notes/Vite]] | Component-based UI, fast dev server & production builds      |
-| **Styling**           | TailwindCSS, [[notes/CSS]]      | Utility-first styling and responsive design                 |
+| **Framework / Build** | [[notes/Tech Stack/React]], [[notes/Tech Stack/Vite]] | Component-based UI, fast dev server & production builds      |
+| **Styling**           | TailwindCSS, [[notes/Tech Stack/CSS]]      | Utility-first styling and responsive design                 |
 | **Animations**        | Motion                          | Smooth transitions and gesture handling                     |
 | **Routing**           | React Router                    | Declarative navigation across app pages                     |
-| **Logic**             | [[notes/JavaScript]]            | Application logic, state management, API handling           |
+| **Logic**             | [[notes/Tech Stack/JavaScript]]            | Application logic, state management, API handling           |
 | **Data API**          | OMDb                            | Provides detailed movie data                                |
 
 ## Key Features & UX Flow
@@ -53,7 +53,7 @@ Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/MovieVault)**
   • *Watchlist*: shows curated list of saved movies.  
   • *MovieDetails*: dedicated page for detailed metadata.  
   • *NotFound*: fallback 404 page for invalid routes.  
-- **API Handling**: integrates with the [[notes/OMDb API]] using API keys from `.env`.  
+- **API Handling**: integrates with the OMDb API using API keys from `.env`.  
 - **State Management**: uses React hooks to manage search state and watchlist persistence (local state).  
 
 ## UI / Responsiveness & Design Decisions
