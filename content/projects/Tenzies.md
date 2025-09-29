@@ -4,9 +4,8 @@ author: Ashwin S. Nambiar
 date: 2025-09-29
 tags: [projects, react, vite, framer-motion, javascript, css, games, portfolio]
 ---
-
 ## Overview
-**Tenzies** is an addictive dice game where **strategy meets luck**. Players roll ten dice, strategically hold certain values, and continue rolling until all dice match. Built with [[notes/Tech Stack/React]], it emphasizes engaging gameplay, smooth animations, and responsive design within [[notes/Web Development]].
+**Tenzies** is an addictive dice game where **strategy meets luck**. Players roll ten dice, strategically hold certain values, and continue rolling until all dice match. Built with [[notes/Tech Stack/React]], it emphasizes engaging gameplay, smooth animations, and responsive design within [[notes/Web Development]]. This project as build as part of my learning journey with [[notes/Scrimba]], do check them out if you are trying to get into web development.
 
 Live: **[tenzies.ashwin.co.in](https://tenzies.ashwin.co.in)**  
 Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Tenzies)**
@@ -46,7 +45,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Tenzies)**
 - **App.jsx**: Main game logic and React state management.  
 - **Die.jsx**: Dice component with click/hold interactivity.  
 - **styles.css**: Handles layout, responsiveness, and animations.  
-- **animations (Framer Motion)**: Provides smooth rolling effects.  
+- **animations (Motion)**: Provides smooth rolling effects.  
 - **React Confetti**: Implements celebratory victory screen.  
 - **public/screenshots/**: Contains project visuals for documentation.  
 
