@@ -55,7 +55,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Blogspace)**
 - Add persistent storage (localStorage or backend integration).  
 - Include categories, tags, and search functionality.  
 - Add support for rich text formatting (bold, italics, links).  
-- User authentication for personalized blogging.  
+- User [[notes/Authentication|authentication]] for personalized blogging.  
 
 ## Screens & Visuals
 ### Landing Page

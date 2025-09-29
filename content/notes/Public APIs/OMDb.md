@@ -14,7 +14,7 @@ Website: [https://www.omdbapi.com/](https://www.omdbapi.com/)
 - Support for both free and paid API keys (paid keys enable higher request limits and additional data)  
 
 ## Usage
-### Authentication
+### [[notes/Authentication]]
 Access requires an API key. After registering on the OMDb site, include the key in all requests using the `apikey` parameter.
 
 ### Example Query

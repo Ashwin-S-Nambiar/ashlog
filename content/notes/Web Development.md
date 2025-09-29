@@ -13,7 +13,7 @@ The **client-side** portion of web development that focuses on what users see an
 - Often uses frameworks like [[notes/Tech Stack/React]] to create [[notes/Single Page Applications]]  
 - Build tools like [[notes/Tech Stack/Vite]] speed up development and optimize production builds  
 ### Backend Development
-The **server-side** portion that manages data, authentication, APIs, and business logic.  
+The **server-side** portion that manages data, [[notes/Authentication|authentication]], APIs, and business logic.  
 - Can be written in languages like Python, Node.js, Java, Ruby, or PHP  
 - Databases ([[notes/Tech Stack/SQL]] or [[notes/Tech Stack/NoSQL]]) handle persistent storage  
 - REST or GraphQL APIs often connect frontend and backend  
