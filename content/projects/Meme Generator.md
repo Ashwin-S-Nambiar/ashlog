@@ -8,7 +8,7 @@ tags: [projects, react, javascript, portfolio, experiments, meme-app]
 Meme Generator is a lightweight front-end application that integrates with the [[notes/Public APIs/Imgflip]] [[notes/API]] to fetch meme templates dynamically. Users can overlay custom text on memes, preview changes instantly, and either download the result or share it directly. Built using modern [[notes/Web Development]] practices, it emphasizes responsiveness and ease of use.
 
 Live: **[meme-generator.ashwin.co.in](https://meme-generator.ashwin.co.in)**  
-Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/meme-generator)**
+Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/meme-generator)**
 
 ## Goals & Problems Solved
 - **Template Variety**: Fetches templates from the Imgflip API rather than relying on a static set.  

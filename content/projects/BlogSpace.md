@@ -8,7 +8,7 @@ tags: [projects, javascript, html, css, blogging, portfolio, experiments]
 **BlogSpace** is a simple blogging platform built with vanilla web technologies that allows users to both **write** and **display** blogs in a clean, user-friendly interface. The project focuses on providing a minimal yet functional blogging experience within [[notes/Web Development]].
 
 Live: **[blogspace.ashwin.co.in](https://blogspace.ashwin.co.in)**  
-Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/Blogspace)**
+Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Blogspace)**
 
 ## Goals & Problems Solved
 - Provide a simple platform for users to write and publish their own blogs.  
