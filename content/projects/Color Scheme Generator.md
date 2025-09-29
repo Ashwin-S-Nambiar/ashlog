@@ -8,7 +8,7 @@ tags: [projects, javascript, html, css, api, portfolio, experiments]
 ## Overview
 Color Scheme Generator is a web application that allows users to generate harmonious color palettes based on a selected base color. It integrates with the [[notes/Public APIs/Color API]] to provide various harmony options and offers instant copying of color codes. The project emphasizes clean design, interactivity, and responsive layouts within [[notes/Web Development]].
 
-Live: **[color-scheme-generator-liart.vercel.app](https://color-scheme-generator.ashwin.co.in)**  
+Live: **[color-scheme-generator.ashwin.co.in](https://color-scheme-generator.ashwin.co.in)**  
 Source code: **[GitHub](https://github.com/Ashwin-S-Nambiar/color-scheme-generator)** 
 
 ## Goals & Problems Solved
