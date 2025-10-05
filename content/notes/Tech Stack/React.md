@@ -1,5 +1,6 @@
 ---
 title: React
+date: 2025-09-28
 tags: [react, javascript, frontend, ui, library]
 ---
 React is an **open-source [[notes/Tech Stack/JavaScript]] library** for building user interfaces (UIs), primarily used for **[[notes/Single Page Applications]] (SPAs)**. It is maintained by **Meta (formerly Facebook)** along with a community of individual developers and companies.

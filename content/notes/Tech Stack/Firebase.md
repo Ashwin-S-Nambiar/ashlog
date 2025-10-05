@@ -1,5 +1,6 @@
 ---
 title: Firebase
+date: 2025-09-28
 tags: [firebase, backend, database, authentication, hosting]
 ---
 **Firebase** is a Backend-as-a-Service (BaaS) platform developed by Google. It provides tools and services such as real-time databases, [[notes/Authentication|authentication]], cloud storage, hosting, and serverless functions, enabling developers to build and scale web and mobile applications quickly without managing infrastructure.  

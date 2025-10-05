@@ -1,5 +1,6 @@
 ---
 title: SQL
+date: 2025-09-28
 tags: [sql, database, relational, web, backend, data]
 ---
 **SQL (Structured Query Language)** is the standard language for interacting with **relational databases**. It allows defining schemas, querying data, and managing database structures in a predictable, table-based format.

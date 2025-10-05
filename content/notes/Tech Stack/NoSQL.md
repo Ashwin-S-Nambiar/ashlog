@@ -1,5 +1,6 @@
 ---
 title: NoSQL
+date: 2025-09-28
 tags: [nosql, database, web, backend, data]
 ---
 **NoSQL** databases are **non-relational databases** that store and retrieve data in flexible formats, such as key-value pairs, documents, wide-column stores, or graphs. They are commonly used in [[notes/Web Development]] when scalability and schema flexibility are priorities.

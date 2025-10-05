@@ -1,5 +1,6 @@
 ---
 title: Vite
+date: 2025-09-28
 tags: [vite, build-tool, javascript, frontend, react]
 ---
 Vite is a **next-generation frontend build tool** that provides a faster and leaner development experience for modern web projects. It was created by Evan You, the creator of Vue.js.

@@ -1,5 +1,6 @@
 ---
 title: Public APIs
+date: 2025-09-28
 tags: [api, public, free, projects]
 ---
 ## Overview

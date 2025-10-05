@@ -1,5 +1,6 @@
 ---
 title: TypeScript
+date: 2025-09-28
 tags: [typescript, javascript, programming, web, frontend, backend]
 ---
 TypeScript is a **statically typed superset of [[notes/Tech Stack/JavaScript]]** developed and maintained by Microsoft. It adds optional static typing and modern features to JavaScript, enabling developers to build more reliable, maintainable, and scalable applications.

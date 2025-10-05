@@ -1,5 +1,6 @@
 ---
 title: MongoDB
+date: 2025-09-28
 tags: [mongodb, database, nosql, backend, web]
 ---
 **MongoDB** is a popular **[[notes/Tech Stack/NoSQL]] database** that stores data in flexible, JSON-like documents. It is widely used in [[notes/Web Development]] projects that require scalability, high availability, and quick iteration cycles.  

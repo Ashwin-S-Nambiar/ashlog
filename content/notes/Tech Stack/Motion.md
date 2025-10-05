@@ -1,5 +1,6 @@
 ---
 title: Motion
+date: 2025-09-28
 tags: [animation, react, frontend, motion, ui]
 ---
 **Motion (previously as Framer Motion)** is a production ready animation and gesture library for [[notes/Tech Stack/React]]. It provides a declarative API for creating smooth, complex animations with minimal code.

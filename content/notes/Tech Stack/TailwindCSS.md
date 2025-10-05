@@ -1,5 +1,6 @@
 ---
 title: TailwindCSS
+date: 2025-09-28
 tags: [css, tailwind, framework, styling, frontend]
 ---
 **TailwindCSS** is an utility first [[notes/Tech Stack/CSS]] framework that provides low level utility classes to build custom designs directly in markup. Instead of writing custom CSS, developers compose classes to control layout, spacing, typography, colors, and more.

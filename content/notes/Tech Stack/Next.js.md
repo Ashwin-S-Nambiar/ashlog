@@ -1,5 +1,6 @@
 ---
 title: Next.js
+date: 2025-09-28
 tags: [nextjs, react, framework, javascript, web, frontend, fullstack]
 ---
 **Next.js** is a **React framework** for building modern web applications with features like server-side rendering (SSR), static site generation (SSG), and API routes. It extends [[notes/Tech Stack/React]] to provide better performance, scalability, and developer experience.  
