@@ -88,4 +88,4 @@ Sample JSON Response (simplified):
 * New apps may face restrictions due to recent policy changes
 
 ## Purpose
-This is used in the Now Playing widget that you can see in my portfolio https://ashwin.co.in/#my-gear
+This is used in the Now Playing widget that you can see in my [portfolio](https://ashwin.co.in/#contact)
