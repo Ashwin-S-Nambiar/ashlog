@@ -41,7 +41,6 @@ Spotify enforces rate limits to prevent abuse. Exceeding limits returns HTTP sta
 Recently, Spotify made policy changes restricting certain endpoints and access for new or in-development apps.
 
 ## Use Cases & Integration
-
 - Music apps that allow users to search, play, or manage tracks and playlists  
 - Dashboards showing user listening statistics  
 - Recommendation systems based on user tastes  
@@ -88,4 +87,4 @@ Sample JSON Response (simplified):
 * New apps may face restrictions due to recent policy changes
 
 ## Purpose
-This is used in the Now Playing widget that you can see in my [portfolio](https://ashwin.co.in/#contact)
+This API is used in the Now Playing widget that you can see in my [portfolio](https://ashwin.co.in/#contact), Check it out!
