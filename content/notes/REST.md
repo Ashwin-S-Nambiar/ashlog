@@ -1,5 +1,6 @@
 ---
 title: REST
+date: 2025-09-21
 tags: [rest, api, architecture, backend]
 ---
 **REST (Representational State Transfer)** is an architectural style for designing networked applications. It relies on stateless, client-server communication over HTTP, where resources are represented using standard formats like JSON or XML.  

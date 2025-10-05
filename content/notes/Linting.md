@@ -1,5 +1,6 @@
 ---
 title: Linting
+date: 2025-09-21
 tags: [linting, code-quality, development, tooling]
 ---
 **Linting** is the process of analyzing source code to detect errors, stylistic issues, and potential bugs before execution. It helps enforce coding standards and maintain consistency across projects.  

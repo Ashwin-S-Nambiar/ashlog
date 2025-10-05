@@ -1,5 +1,6 @@
 ---
 title: Open Trivia DB
+date: 2025-09-27
 tags: [api, trivia, questions, database, opentdb]
 ---
 ## Overview

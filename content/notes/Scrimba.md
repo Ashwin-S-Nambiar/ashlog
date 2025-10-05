@@ -1,5 +1,6 @@
 ---
 title: Scrimba
+date: 2025-09-29
 tags: [learning, web-development, courses, scrimba]
 ---
 **Scrimba** is an interactive learning platform for web development and programming. It provides a unique "scrim" format where users can pause tutorials and edit code directly in the lesson environment, blending video and coding into one seamless experience.  

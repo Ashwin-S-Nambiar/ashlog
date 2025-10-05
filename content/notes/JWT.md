@@ -1,5 +1,6 @@
 ---
 title: JWT
+date: 2025-09-22
 tags: [jwt, authentication, security, web, token]
 ---
 **JWT (JSON Web Token)** is an open standard (RFC 7519) used for securely transmitting information between parties as a JSON object. It is compact, URL-safe, and commonly used for [[notes/Authentication|authentication]] in [[notes/Web Development]] applications built with [[notes/Tech Stack/JavaScript]].

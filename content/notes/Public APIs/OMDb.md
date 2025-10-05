@@ -1,5 +1,6 @@
 ---
 title: OMDb
+date: 2025-09-27
 tags: [api, movies, web, javascript, projects]
 ---
 ## Overview

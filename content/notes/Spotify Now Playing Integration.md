@@ -1,5 +1,6 @@
 ---
 title: Spotify Now Playing Integration
+date: 2025-10-5
 tags: [spotify, api, nextjs, react, music, integration, portfolio, realtime]
 ---
 **Spotify Now Playing Integration** is a dynamic feature that displays your currently playing Spotify track in real-time on your website or portfolio. Building this feature was one of my favorite portfolio additions - there's something magical about visitors seeing exactly what song is fueling my coding sessions in real-time.

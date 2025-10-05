@@ -1,5 +1,6 @@
 ---
 title: API
+date: 2025-09-21
 tags: [api, development, integration, backend]
 ---
 An **API (Application Programming Interface)** defines a set of rules and protocols that allow different software systems to communicate with each other. In web development, APIs often expose data or services over the internet, enabling integration between frontend and backend systems.  

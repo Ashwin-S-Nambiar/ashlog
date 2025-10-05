@@ -1,5 +1,6 @@
 ---
 title: Authentication
+date: 2025-09-29
 tags: [tech-stack, web-development, security, identity, auth]
 ---
 

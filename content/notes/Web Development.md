@@ -1,5 +1,6 @@
 ---
 title: Web Development
+date: 2025-09-20
 tags: [web, frontend, backend, fullstack, development]
 ---
 **Web Development** is the process of building and maintaining websites and web applications that run on the internet. It involves a combination of **frontend development**, **backend development**, and supporting tools or workflows that connect the two.  

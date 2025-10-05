@@ -1,6 +1,8 @@
 ---
 title: Spotify Web API
+date: 2025-10-5
 tags: [api, music, web, notes]
+
 ---
 The **Spotify Web [[notes/API]]** is a [[notes/REST]]ful interface provided by Spotify that allows developers to retrieve and manipulate Spotify’s catalog data, control playback, manage playlists, and access user-related data.
 
