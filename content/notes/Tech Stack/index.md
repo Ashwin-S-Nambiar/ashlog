@@ -1,5 +1,6 @@
 ---
 title: Tech Stack
+date: 2025-09-28
 tags: [technologies, web, frontend, backend]
 ---
 ## Overview
