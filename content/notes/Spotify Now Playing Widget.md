@@ -1,13 +1,13 @@
 ---
-title: Spotify Now Playing Integration
+title: Spotify Now Playing Widget
 date: 2025-10-5
-tags: [spotify, api, nextjs, react, music, integration, portfolio, realtime]
+tags: [spotify, api, nextjs, react, music, widget, portfolio, realtime]
 ---
-**Spotify Now Playing Integration** is a dynamic feature that displays your currently playing Spotify track in real-time on your website or portfolio. Building this feature was one of my favorite portfolio additions - there's something magical about visitors seeing exactly what song is fueling my coding sessions in real-time.
+**Spotify Now Playing Widget** is a dynamic widget that displays your currently playing Spotify track in real-time on your website or portfolio. Building this feature was one of my favorite portfolio additions.
 
-This integration combines the [[notes/Public APIs/Spotify Web API]], [[notes/Tech Stack/Next.js]] API routes, and real-time data fetching to create an engaging music widget that updates automatically. What started as a simple "what am I listening to?" became a sophisticated system that handles authentication, caching, error states, and provides a seamless user experience.
+This widget combines the [[notes/Public APIs/Spotify Web API]], [[notes/Tech Stack/Next.js]] API routes, and real-time data fetching to create an engaging music widget that updates automatically. What started as a simple "what am I listening to?" became a sophisticated system that handles authentication, caching, error states, and provides a seamless user experience.
 
-The implementation uses **SWR** for efficient data fetching with intelligent caching and [[notes/Tech Stack/React]] components for a responsive UI that gracefully adapts to different playback states - whether I'm jamming to music, in a private session, or not listening to anything at all.
+The implementation uses [[notes/SWR]] for efficient data fetching with intelligent caching and [[notes/Tech Stack/React]] components for a responsive UI that gracefully adapts to different playback states, whether I'm jamming to music, in a private session, or not listening to anything at all.
 
 ## Visual Preview: See It In Action
 Before diving into the technical details, let me show you what this actually looks like in practice. These screenshots are from my actual portfolio - not mockups, but the real widget in different states.
@@ -17,7 +17,7 @@ Before diving into the technical details, let me show you what this actually loo
 
 ![Spotify widget showing currently playing track with album artwork](./assets/spotify-now-playing-active.png)
 
-*The component in its full glory - displaying "I Really Want to Stay at Your House" by Rosa Walton. Notice the clean layout with the album art, track title and artist name indicating it's live data. The album artwork is clickable and takes you directly to the song on Spotify.*
+*Displaying "I Really Want to Stay at Your House" by Rosa Walton. Shows the album art, track title and artist name indicating it's live data. The album artwork is clickable and takes you directly to the song on Spotify.*
 
 </div>
 
@@ -26,14 +26,14 @@ Before diving into the technical details, let me show you what this actually loo
 
 ![Spotify widget showing idle state](./assets/spotify-now-playing-idle.png)
 
-*The graceful fallback state when I'm not listening to anything. It maintains the widget's presence without looking broken or empty. The green Spotify icon stays visible to keep the branding consistent.*
+*The graceful fallback state when I'm not listening to anything. It maintains the widget's presence without looking broken or empty.*
 
 </div>
 
 ## Why Build This?
 As a developer who codes with music constantly playing, I wanted my portfolio to reflect this aspect of my personality. Instead of a static "about me" section, visitors can see exactly what's soundtrack-ing my current coding session. It's a small detail that adds personality and creates an instant connection with fellow music lovers.
 
-The technical challenge was equally appealing: building a real-time integration that's both performant and respectful of API limits, while handling all the edge cases that come with external API dependencies.
+The technical challenge was equally appealing: building a real-time widget that's both performant and respectful of API limits, while handling all the edge cases that come with external API dependencies.
 
 ## Architecture Overview
 The system consists of three main components that work together seamlessly:
@@ -60,7 +60,7 @@ Smart polling system that keeps everything current without being wasteful:
 - **Background sync** when users return to the tab
 
 ## Getting Started: Setting Up Spotify Integration
-The setup process involves configuring a Spotify app and handling OAuth authentication. Don't worry - it's more straightforward than it initially appears!
+The setup process involves configuring a Spotify app and handling OAuth authentication. Don't worry; it's more straightforward than it initially appears!
 
 ### Step 1: Create Your Spotify Application
 Navigate to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) and create a new app:
@@ -69,8 +69,8 @@ Navigate to the [Spotify Developer Dashboard](https://developer.spotify.com/dash
 - **App Name**: Something descriptive like "Portfolio Now Playing" or "Personal Website Music Widget"
 - **App Description**: Brief description like "Displays currently playing music on my portfolio website"
 - **Website**: Your portfolio URL (optional but recommended)
-- **Redirect URI**: 
-  - Development: `http://localhost:3000/api/spotify/callback` (you can use `ngrok http 3000` to generate an alternative url if Spotify has issues with localhost.)
+- **Redirect URI**: (in case Spotify has issues with localhost in URI; use ngrok `ngrok http 3000`)
+  - Development: `http://localhost:3000/api/spotify/callback`
   - Production: `https://yourdomain.com/api/spotify/callback`
 - Select **Web API** from the list in **Which API/SDKs are you planning to use?**.
 - Save these changes.
@@ -95,7 +95,6 @@ This is the trickiest part, but you only need to do it once. We need to get a re
 I'll show you two methods: an **easier method** using a temporary callback route in your app, and a **manual method** using curl commands.
 
 #### Method 1: Using a Callback Route (Easier)
-
 This method creates a temporary API route that handles the token exchange for you automatically.
 
 **3a. Create the Callback Route**
@@ -176,7 +175,6 @@ https://accounts.spotify.com/authorize?client_id=YOUR_CLIENT_ID&response_type=co
 Once you have your refresh token, **delete the callback route file** (`app/api/spotify/callback/route.ts`). You don't need it anymore and it's a security risk to leave it in production.
 
 #### Method 2: Manual Token Exchange (Alternative)
-
 If you prefer not to create a callback route, you can use curl commands directly.
 
 **3a. Build the Authorization URL**
@@ -527,7 +525,7 @@ Building a real-time music widget means handling every possible failure mode gra
   "swr": "^2.3.6",                    // Smart data fetching with caching
   "next": "^15.5.4",                 // React framework with API routes
   "react": "^19.0.0",                // UI library
-  "react-icons": "^4.12.0"           // Spotify icon component
+  "react-icons": "^5.5.0"           // Spotify icon component
 }
 ```
 
@@ -550,27 +548,26 @@ After implementing this on my portfolio, I've noticed:
 - **Performance**: Zero impact on page load times thanks to the smart caching strategy
 - **Reliability**: 99.9% uptime with graceful handling of Spotify API outages
 
-The feature adds personality without sacrificing performance - exactly what a developer portfolio should do.
+The feature adds personality without sacrificing performance, exactly what a developer portfolio should do.
 
-## The Final Product: Integration in Context
+## The Final Product: Widget in Context
 
 Here's how the Spotify widget looks integrated into my actual portfolio. Context matters - it's not just a standalone component, but part of a cohesive design that tells visitors who I am.
 
-![Full portfolio page showing Spotify integration](./assets/portfolio-spotify.png)
-*The Spotify widget in its natural habitat - the sidebar of my portfolio. It sits right next to my bio and social links, making it easy for visitors to see what's playing without it being too in-your-face.*
+![Full portfolio page showing Spotify Widget](./assets/portfolio-spotify.png)
+*It sits right next to my bio and social links near **my gear.** section, making it easy for visitors to see what's playing without it being too in-your-face.*
 
 ## Tips for Your Implementation
-
 After living with this feature for a while, here are some lessons learned:
 
 ### Visual Design Tips
 1. **Album Art Size**: I settled on 100x100px as the sweet spot - large enough to be visually appealing, small enough not to dominate the page. Experiment with what works for your layout.
 
-2. **Spotify Branding**: Keep the green (#1DB954) for the Spotify icon - it's instantly recognizable and adds that pop of color.
+2. **Spotify Branding**: Keep the green (#1DB954) for the Spotify icon; it's instantly recognizable and adds that pop of color.
 
 3. **Text Hierarchy**: Notice how the track title is slightly bolder than the artist name. These small typographic details matter.
 
-4. **Spacing**: Don't cramp the component. Give it breathing room in your layout - it deserves to shine.
+4. **Spacing**: Don't cramp the component. Give it breathing room in your layout.
 
 ### Technical Tips
 1. **Test All States**: Before deploying, make sure to actually test all states - play music, pause it, go private, disconnect internet. You want to see every possible state.
@@ -585,8 +582,6 @@ After living with this feature for a while, here are some lessons learned:
 1. **Music Choice Matters**: Remember, this widget broadcasts your music taste. Maybe skip the embarrassing songs, or embrace them fully - your choice!
 
 2. **Private Sessions**: Use Spotify's private session feature when you're listening to focus music on repeat for the 50th time.
-
-3. **Update README**: Document this feature in your portfolio's README. It's a great talking point in interviews.
 
 ## What's Next?
 Once you have the basic implementation working, consider these enhancements:
