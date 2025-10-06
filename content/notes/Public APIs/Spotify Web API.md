@@ -87,4 +87,4 @@ Sample JSON Response (simplified):
 * New apps may face restrictions due to recent policy changes
 
 ## Purpose
-This API is used in the Spotify Now Playing widget that you can see in my [portfolio](https://ashwin.co.in/#footer), Check it out!
+This API can be used to show the currently playing songs of a user in their own website, portfolios etc to add a personal touch to it. You can see it in action here [portfolio](https://ashwin.co.in/#footer).
