@@ -29,3 +29,6 @@ Authentication is the process of verifying the identity of a user, device, or sy
 - **Frontend**: MSAL.js, Firebase Auth, NextAuth.js  
 - **Backend**: Passport.js, Auth0, Keycloak  
 - **Standards**: OAuth2, OpenID Connect, SAML  
+
+## Purpose
+Authentication helps in establishing a trusted identity layer so apps can safely decide what a user or service can do. It protects sensitive resources, enables personalization, and underpins authorization, auditing, and compliance.  
