@@ -25,6 +25,7 @@ function Profile() {
 }
 ```
 
+## Purpose
 SWR is ideal for client-side [[notes/API]] calls in Next.js apps where performance and data freshness are important.
 
 **Docs:** [https://swr.vercel.app/](https://swr.vercel.app/)
