@@ -1,6 +1,6 @@
 ---
 title: Spotify Web API
-date: 2025-10-5
+date: 2025-10-10
 tags: [api, music, web, notes]
 
 ---

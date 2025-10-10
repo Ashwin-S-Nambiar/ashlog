@@ -1,6 +1,6 @@
 ---
 title: Spotify Now Playing Widget
-date: 2025-10-5
+date: 2025-10-10
 tags: [spotify, api, nextjs, react, music, widget, portfolio, realtime]
 ---
 **Spotify Now Playing Widget** is a dynamic widget that displays your currently playing Spotify track in real-time on your website or portfolio. Building this feature was one of my favorite portfolio additions.

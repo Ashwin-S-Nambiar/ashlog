@@ -1,6 +1,6 @@
 ---
 title: SWR
-date: 2025-10-4
+date: 2025-10-09
 tags: [react, nextjs, data-fetching, caching, vercel]
 ---
 **SWR** is a lightweight data fetching library for [[notes/Tech Stack/React]] developed by [[notes/Tech Stack/Next.js]]. It implements the **stale-while-revalidate** strategy, meaning it returns cached data immediately (stale) and then fetches fresh data in the background, ensuring both speed and accuracy.

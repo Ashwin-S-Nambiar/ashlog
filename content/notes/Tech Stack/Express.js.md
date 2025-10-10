@@ -1,6 +1,6 @@
 ---
 title: Express.js
-date: 2025-10-10
+date: 2025-10-09
 tags: [expressjs, nodejs, backend, web, framework, api]
 ---
 **Express.js** (or simply **Express**) is a minimal and flexible **[[notes/Tech Stack/Node.js]] web framework** that provides a robust set of features for building **server-side applications** and **RESTful APIs**. It’s one of the most popular backend frameworks in [[notes/Web Development]], especially in the **MERN stack** (MongoDB, Express, React, Node.js).
