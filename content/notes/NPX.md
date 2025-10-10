@@ -4,7 +4,7 @@ date: 2025-10-08
 tags: [npx, nodejs, package-runner, npm, backend, frontend, web-development]
 ---
 ## Overview
-**npx** is a **package runner tool** that comes bundled with **[[notes/Tech Stack/npm]] (v5.2.0 and above)**. It allows developers to **execute Node.js packages directly from the npm registry** without having to install them globally or permanently in your project.
+**npx** is a **package runner tool** that comes bundled with **[[notes/Tech Stack/NPM|npm]] (v5.2.0 and above)**. It allows developers to **execute Node.js packages directly from the npm registry** without having to install them globally or permanently in your project.
 
 In short, `npx` helps you **run Node.js commands quickly and cleanly** — perfect for trying tools, running CLIs, or executing scripts on the fly.
 

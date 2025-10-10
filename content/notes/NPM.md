@@ -4,7 +4,7 @@ date: 2025-10-08
 tags: [npm, nodejs, package-manager, frontend, backend, web-development]
 ---
 ## Overview
-**npm (Node Package Manager)** is the default **package manager for [[notes/Tech Stack/Node.js]]**. It allows developers to **install, manage, and share** open-source JavaScript packages that can be used in both **frontend** and **backend** projects.
+**npm (Node Package Manager)** is the default **package manager for [[notes/Tech Stack/Node.js]]**. It allows developers to **install, manage, and share** open-source JavaScript packages that can be used in both **frontend** and **[[notes/Backend|backend]]** projects.
 
 npm is an essential tool in modern **[[notes/Web Development]]** workflows, enabling faster development and easier dependency management.
 
