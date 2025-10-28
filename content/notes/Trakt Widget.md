@@ -15,9 +15,9 @@ tags:
 ---
 A real-time widget that displays the last movie or TV episode you watched on [Trakt.tv](https://trakt.tv), complete with poster images and direct links. This became one of my favorite portfolio additions because it shows visitors what I've been watching lately—adding that personal touch that makes a portfolio feel human.
 
-The project combines the **Trakt API** for watch history, **TMDB API** for beautiful poster images, **Express.js** for a lightweight backend, and **PostgreSQL** for persistent token storage. What started as "wouldn't it be cool to show what I'm watching?" evolved into a robust system handling OAuth refresh tokens, intelligent caching, and graceful error handling.
+The project combines the **[[notes/Public APIs/Trakt API]]** for watch history, **[[notes/Public APIs/TMDB API]]** for beautiful poster images, **[[notes/Tech Stack/Express.js]]** for a lightweight backend, and **[[notes/Tech Stack/PostgreSQL]]** for persistent token storage. What started as "wouldn't it be cool to show what I'm watching?" evolved into a robust system handling OAuth refresh tokens, intelligent caching, and graceful error handling.
 
-The implementation uses smart **server-side caching** (5-minute TTL) to respect API rate limits, automatic **token refresh** to stay authenticated indefinitely, and a **React component** that elegantly handles all possible states—whether you just finished a movie, binged a TV series, or haven't watched anything recently.
+The implementation uses smart **server-side caching** (5-minute TTL) to respect [[notes/API]] rate limits, automatic **token refresh** to stay authenticated indefinitely, and a **React component** that elegantly handles all possible states—whether you just finished a movie, binged a TV series, or haven't watched anything recently.
 
 ## Visual Preview: See It In Action
 Before jumping into the technical stuff, here's what this actually looks like when integrated into a portfolio. These are real screenshots showing the widget in different states—not mockups, but the actual component in use.
