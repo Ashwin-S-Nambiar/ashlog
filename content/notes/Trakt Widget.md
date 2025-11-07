@@ -182,9 +182,6 @@ app.get("/api/trakt/last", async (req, res) => {
 app.listen(process.env.PORT || 3001);
 ```
 
-**Why this snippet:**
-This is the only server code you need to expose the widget's data endpoint. Keep CORS narrow in production. `initialize()` validates env variables and DB connectivity.
-
 ## 2) Refresh token & access token exchange (`src/trakt.js`)
 Handles token refresh and rotation (critical part).
 
@@ -222,9 +219,6 @@ async function refreshAccessToken() {
   return data.access_token;
 }
 ```
-
-**Why this snippet:**
-Token rotation is the main pitfall—if you don't persist the new refresh token you’ll lose auth later. This function does the refresh and persists a rotated refresh token.
 
 ## 3) Fetch last watched item (movies & episodes, TMDB enrichment)
 Parallel fetch, pick newest, enrich with poster if available.
@@ -293,9 +287,6 @@ export async function getLastWatched() {
 }
 ```
 
-**Why this snippet:**
-Parallel requests are fast and picking the most recent between movies and episodes covers all scenarios. Poster enrichment is optional—fails gracefully when TMDB key is absent.
-
 ## 4) Token persistence (Postgres fallback to ENV) (`src/db.js`)
 Simple single-row token store with upsert.
 
@@ -325,53 +316,6 @@ export async function saveToken(newToken) {
   );
 }
 ```
-
-**Why this snippet:**
-Single-row storage avoids complexity. Fallback to env makes local dev trivial; DB persistence is recommended for production to survive refresh rotations.
-
-## 5) Frontend: simple Next.js client component (fetch + display)
-Minimal, accessible, abort-safe client to render poster/title.
-
-```tsx
-"use client";
-import { useEffect, useState } from "react";
-
-export default function LastWatched() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const ctrl = new AbortController();
-    fetch("/api/trakt/last", { signal: ctrl.signal })
-      .then(r => r.json())
-      .then(json => { if (json.ok) setData(json.data); })
-      .catch(err => { if (err.name !== "AbortError") console.error(err); })
-      .finally(() => setLoading(false));
-    return () => ctrl.abort();
-  }, []);
-
-  if (loading) return <div>loading…</div>;
-  if (!data) return <div>no recent activity</div>;
-
-  const displayTitle = data.type === "episode" ? `${data.show_title} S${data.season}E${data.episode}` : data.title;
-
-  return (
-    <div>
-      {data.poster_url ? (
-        <a href={data.trakt_url} target="_blank" rel="noreferrer">
-          <img src={data.poster_url} alt={displayTitle} width={100} height={150} />
-        </a>
-      ) : (
-        <div style={{ width: 100, height: 150 }}>No image</div>
-      )}
-      <div>{displayTitle}</div>
-    </div>
-  );
-}
-```
-
-**Why this snippet:**
-Lightweight, doesn't depend on extra libraries (Image component optional). Abort controller prevents stale fetches if component unmounts.
 
 ## Quick checklist / gotchas
 * **Generate refresh token once** via the OAuth flow and save it. If you skip this, nothing will return user-specific history.
@@ -423,8 +367,6 @@ The OAuth flow is designed to "set it and forget it":
 ```
 Database → Environment Variable → Error
 ```
-
-This means the app works locally without a database, but in production you get the benefit of automatic token rotation handling.
 
 ### Error Handling Philosophy
 Building a real-time widget means embracing failure gracefully:
@@ -511,8 +453,6 @@ Render offers a generous free tier perfect for this:
    - Render auto-provisions and sets `DATABASE_URL`
 6. **Deploy!**
 
-The self-ping mechanism automatically keeps your free tier instance alive.
-
 ### Alternative: Railway, Fly.io, or Vercel
 This is a standard Express app, so it deploys anywhere:
 
@@ -525,8 +465,6 @@ This is a standard Express app, so it deploys anywhere:
 -  **Trakt API calls**: ~48/day (well within limits)
 -  **TMDB API calls**: ~48/day (also well within limits)
 -  **Database queries**: ~144/day (minimal load)
-
-The feature adds massive personality with minimal cost and maintenance.
 
 ## Tips for Your Implementation
 After living with this feature, here are some lessons learned:
@@ -563,8 +501,6 @@ Once you have the basic implementation working, consider these enhancements:
 - **Watch History Cache**: Store recent watches in database for richer displays
 - **Dynamic Theming**: Extract colors from poster and apply to widget background
 - **Analytics**: Track which content generates the most clicks
-
-The Trakt API is incredibly rich with data. This widget is just scratching the surface of what's possible!
 
 ## Dependencies
 ```json
