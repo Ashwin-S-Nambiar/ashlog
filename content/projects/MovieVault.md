@@ -5,7 +5,7 @@ date: 2025-09-21
 tags: [projects, react, javascript, portfolio, experiments, movie-app]
 ---
 ## Overview
-MovieVault is a front-end web application designed to make it easier for users to discover movies, view details, and maintain a personal watchlist. By leveraging the [[notes/Public APIs/OMDb]] API, the app provides access to movie plots, release years, genres, and other metadata. Smooth animations powered by [[notes/Tech Stack/Motion]] (previously as **Framer Motion**), along with responsive design via [[notes/Tech Stack/TailwindCSS]], deliver a polished and engaging user experience.  
+MovieVault is a front-end web application designed to make it easier for users to discover movies, view details, and maintain a personal watchlist. By leveraging the [[notes/Public APIs/TMDB API]], the app provides access to movie plots, release years, genres, and other metadata. Smooth animations powered by [[notes/Tech Stack/Motion]] (previously as **Framer Motion**), along with responsive design via [[notes/Tech Stack/TailwindCSS]], deliver a polished and engaging user experience. Earlier version used [[notes/Public APIs/OMDb]], due to it's downtime I migrated to TMDB.
 
 Live: **[movie-watchlist.ashwin.co.in](https://movie-watchlist.ashwin.co.in)**  
 Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**  
@@ -15,7 +15,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 - **Comprehensive Movie Details**: Display plot, release year, genre, and poster images.  
 - **Personalized Watchlist**: Add and remove movies to manage a watch queue.  
 - **Modern UI/UX**: Deliver smooth transitions and responsiveness across devices.  
-- **API Integration**: Reliably fetch data using the OMDb API.  
+- **API Integration**: Reliably fetch data using the TMDB API.  
 
 ## Architecture & Tech Stack
 | Layer                 | Technology / Library            | Purpose                                                     |
@@ -25,7 +25,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 | **Animations**        | Motion                          | Smooth transitions and gesture handling                     |
 | **Routing**           | React Router                    | Declarative navigation across app pages                     |
 | **Logic**             | [[notes/Tech Stack/JavaScript]]            | Application logic, state management, API handling           |
-| **Data API**          | OMDb                            | Provides detailed movie data                                |
+| **Data API**          | TMDB                            | Provides detailed movie data                                |
 
 ## Key Features & UX Flow
 1. **Movie Search**  
@@ -53,7 +53,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
   • *Watchlist*: shows curated list of saved movies.  
   • *MovieDetails*: dedicated page for detailed metadata.  
   • *NotFound*: fallback 404 page for invalid routes.  
-- **API Handling**: integrates with the OMDb API using API keys from `.env`.  
+- **API Handling**: integrates with the TMDB API using API keys from `.env`.  
 - **State Management**: uses React hooks to manage search state and watchlist persistence (local state).  
 
 ## UI / Responsiveness & Design Decisions
@@ -63,7 +63,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 - **Clear Call to Actions**: buttons for adding/removing from watchlist are prominent.  
 
 ## Challenges & Learnings
-- Integrating and handling rate-limited requests from the OMDb API.  
+- Integrating and handling rate-limited requests from the TMDB API.  
 - Managing watchlist persistence within local state without backend support.  
 - Designing intuitive navigation between multiple views using React Router.  
 - Balancing simplicity of Tailwind utility classes with maintainable styling.  
