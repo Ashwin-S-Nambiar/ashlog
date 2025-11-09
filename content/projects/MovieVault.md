@@ -78,22 +78,16 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 ## Screens & Visuals
 
 ### Landing Page
-![Landing Page](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/LandingPage.png)
+![Landing Page](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/MovieVault.webp)
 
 ### Search Results
-![Search Results](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/SearchResults.png)
-
-### Selecting a Result
-![Selecting a Result](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/SearchResultPress.png)
-
-### Watchlist Page
-![Watchlist](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/WatchList.png)
+![Search Results](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/MovieVault-1.webp)
 
 ### Movie Details
-![Movie Details](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/MovieDetailsPage.png)
+![Movie Details](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/MovieVault-2.webp)
 
-### Adding to Watchlist
-![Add to Watchlist](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/AddToWatchlist.png)
+### Watchlist Page
+![Watchlist](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/MovieVault-3.webp)
 
 ### 404 Page
-![Page Not Found](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/PageNotFound.png)
+![Page Not Found](https://raw.githubusercontent.com/Ashwin-S-Nambiar/MovieVault/main/public/screenshots/MovieVault-4.webp)
