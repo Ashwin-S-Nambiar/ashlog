@@ -6,7 +6,7 @@ tags: [npx, nodejs, package-runner, npm, backend, frontend, web-development]
 ## Overview
 **npx** is a **package runner tool** that comes bundled with **[[notes/Tech Stack/NPM|npm]] (v5.2.0 and above)**. It allows developers to **execute Node.js packages directly from the npm registry** without having to install them globally or permanently in your project.
 
-In short, `npx` helps you **run Node.js commands quickly and cleanly** — perfect for trying tools, running CLIs, or executing scripts on the fly.
+In short, `npx` helps you **run Node.js commands quickly and cleanly** perfect for trying tools, running CLIs, or executing scripts on the fly.
 
 ## Key Features
 * **Run packages without installing:** Executes commands from npm packages without cluttering your global environment.
@@ -43,4 +43,4 @@ You can simply do:
 npx create-react-app my-app
 ```
 
-This uses the latest version directly from npm, runs it, and then removes it — **no global install needed**.
+This uses the latest version directly from npm, runs it, and then removes it **no global install needed**.

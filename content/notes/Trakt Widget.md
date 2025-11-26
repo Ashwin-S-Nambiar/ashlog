@@ -13,26 +13,26 @@ tags:
   - portfolio
   - realtime
 ---
-A real-time widget that displays the last movie or TV episode you watched on [Trakt.tv](https://trakt.tv), complete with poster images and direct links. This became one of my favorite portfolio additions because it shows visitors what I've been watching lately—adding that personal touch that makes a portfolio feel human.
+A real-time widget that displays the last movie or TV episode you watched on [Trakt.tv](https://trakt.tv), complete with poster images and direct links. This became one of my favorite portfolio additions because it shows visitors what I've been watching lately adding that personal touch that makes a portfolio feel human.
 
 The project combines the **[[notes/Public APIs/Trakt API]]** for watch history, **[[notes/Public APIs/TMDB API]]** for beautiful poster images, **[[notes/Tech Stack/Express.js]]** for a lightweight backend, and **[[notes/Tech Stack/PostgreSQL]]** for persistent token storage. What started as "wouldn't it be cool to show what I'm watching?" evolved into a robust system handling OAuth refresh tokens, intelligent caching, and graceful error handling.
 
-The implementation uses smart **server-side caching** (5-minute TTL) to respect [[notes/API]] rate limits, automatic **token refresh** to stay authenticated indefinitely, and a **React component** that elegantly handles all possible states—whether you just finished a movie, binged a TV series, or haven't watched anything recently.
+The implementation uses smart **server-side caching** (5-minute TTL) to respect [[notes/API]] rate limits, automatic **token refresh** to stay authenticated indefinitely, and a **React component** that elegantly handles all possible states whether you just finished a movie, binged a TV series, or haven't watched anything recently.
 
 ## Visual Preview: See It In Action
-Before jumping into the technical stuff, here's what this actually looks like when integrated into a portfolio. These are real screenshots showing the widget in different states—not mockups, but the actual component in use.
+Before jumping into the technical stuff, here's what this actually looks like when integrated into a portfolio. These are real screenshots showing the widget in different states not mockups, but the actual component in use.
 
 ### When You've Watched Something
 <div style="text-align: center;">
 
 ![Trakt widget showing last watched content with poster](./assets/trakt-widget.png)
 
-*Displaying "Severance" Season 2 Episode 7 with its poster. The image is clickable and takes you directly to the episode's Trakt page. Notice the clean layout with the Trakt icon, show title, and season/episode information.*
+*Displaying "Severance" Season 2 Episode 7 with its poster. The image is clickable and takes you directly to the episode's Trakt page.*
 
 </div>
 
 ## Why Build This?
-As someone who loves movies and TV shows, I wanted my portfolio to reflect this part of who I am. Instead of just listing hobbies in an "about me" section, visitors can see **exactly** what I watched last night. Maybe it's a Criterion Collection classic, maybe it's a guilty pleasure reality show—either way, it's authentic and creates instant conversation starters.
+As someone who loves movies and TV shows, I wanted my portfolio to reflect this part of who I am. Instead of just listing hobbies in an "about me" section, visitors can see **exactly** what I watched last night. Maybe it's a Criterion Collection classic, maybe it's a guilty pleasure reality show 😆; either way, it's authentic and creates instant conversation starters.
 
 The technical challenge was equally compelling: building a system that stays authenticated indefinitely without user intervention, handles Trakt's OAuth token rotation, enriches data with TMDB poster images, and maintains excellent performance through smart caching.
 
@@ -42,7 +42,7 @@ Plus, there's something satisfying about solving the "persistent authentication"
 The system has three main components working together seamlessly:
 
 ### 1. Express API Server (`src/index.js`)
-The foundation—a minimal Express.js server that:
+The foundation - a minimal Express.js server that:
 - **Serves the main API endpoint** at `/api/trakt/last` for fetching watch history
 - **Handles CORS** properly for both development and production
 - **Self-pings every 10 minutes** when deployed on Render's free tier to prevent spin-down
@@ -50,7 +50,7 @@ The foundation—a minimal Express.js server that:
 - **Provides health checks** for monitoring and keep-alive pings
 
 ### 2. Trakt Integration Layer (`src/trakt.js`)
-The brain of the operation—handles all the complex logic:
+The brain of the operation - handles all the complex logic:
 - **Automatic OAuth token refresh** with token rotation detection and database persistence
 - **Parallel API calls** to Trakt for both movies and episodes, then picks the most recent
 - **TMDB poster enrichment** to add beautiful cover art (gracefully degraded if unavailable)
@@ -84,7 +84,7 @@ Navigate to [Trakt API Apps](https://trakt.tv/oauth/applications) and create a n
 - **Redirect URI**: `urn:ietf:wg:oauth:2.0:oob` (this is the "out-of-band" mode for CLI apps)
 - **Permissions**: Just the default read permissions are fine
 
-Once created, you'll get a **Client ID** and **Client Secret**—save these for the next step.
+Once created, you'll get a **Client ID** and **Client Secret** save these for the next step.
 
 ### Step 2: Get TMDB API Key (Optional but Recommended)
 For the poster images, you'll need a TMDB API key. Without it, the widget still works but won't show posters.
@@ -119,7 +119,7 @@ RENDER_EXTERNAL_URL=https://your-app.onrender.com
 ```
 
 ### Step 4: Get Your Refresh Token
-This is the most important step—you only do it once, and the token works forever (until you revoke app access).
+This is the most important step you only need to do it once, and the token works forever (until you revoke app access).
 
 Run the included token generator script:
 
@@ -319,8 +319,8 @@ export async function saveToken(newToken) {
 
 ## Quick checklist / gotchas
 * **Generate refresh token once** via the OAuth flow and save it. If you skip this, nothing will return user-specific history.
-* **Persist rotated refresh token.** Trakt may return a new refresh token at refresh time — save it.
-* **Cache** server-side (5 minutes) to avoid hitting Trakt frequently — I can add a 1-file in-memory cache snippet if you want.
+* **Persist rotated refresh token.** Trakt may return a new refresh token at refresh time - save it.
+* **Cache** server-side (5 minutes) to avoid hitting Trakt frequently
 * **TMDB optional.** Works without posters; only add TMDB to improve visuals.
 * **CORS**: lock down to your actual frontend URL in production.
 * **DB optional for dev**, but required for safe, long-running production to handle token rotation.
@@ -340,7 +340,7 @@ The caching is what makes this system efficient and respectful of API limits:
 **Server-Side Cache:**
 - **5-minute TTL** in-memory cache on the Express server
 - Reduces Trakt API calls from **12/hour to 2/hour** (83% reduction)
-- Shared across all requests—if 100 users visit your portfolio, still just 2 API calls per hour
+- Shared across all requests - if 100 users visit your portfolio, still just 2 API calls per hour
 - Automatically invalidates when expired, ensuring freshness
 
 **Client-Side Behavior:**
@@ -349,9 +349,9 @@ The caching is what makes this system efficient and respectful of API limits:
 - **Abort controller** prevents memory leaks on unmount
 
 **Real-World Impact:**
-Without caching: ~300 API calls per day with moderate traffic  
-With caching: ~48 API calls per day  
-That's **84% fewer API calls**, well within all rate limits.
+- Without caching: ~300 API calls per day with moderate traffic  
+- With caching: ~48 API calls per day  
+- That's **84% fewer API calls**, well within all rate limits.
 
 ### Bulletproof Token Management
 The OAuth flow is designed to "set it and forget it":
@@ -471,20 +471,20 @@ After living with this feature, here are some lessons learned:
 
 ### Visual Design Tips
 1. **Poster Dimensions**: I use 100x150px (2:3 aspect ratio) which matches movie poster proportions perfectly
-2. **Trakt Red**: The Trakt brand color is `#ED1C24` (bright red)—use it for the icon
+2. **Trakt Red**: The Trakt brand color is `#ED1C24` (bright red) use it for the icon
 3. **Fallback State**: The "no image" placeholder should match your site's aesthetic
-4. **Spacing**: Give the widget breathing room—don't cram it next to other dense content
+4. **Spacing**: Give the widget breathing room, don't cram it next to other dense content
 
 ### Technical Tips
 1. **Test Token Rotation**: Manually rotate your token to ensure persistence works
 2. **Monitor Logs**: Check server logs occasionally to catch any auth issues early
-3. **API Rate Limits**: Trakt allows ~1000 requests/day; TMDB allows ~1000/day—you'll never hit these
+3. **API Rate Limits**: Trakt allows ~1000 requests/day; TMDB allows ~1000/day ~you'll never hit these
 4. **Database Backups**: If using PostgreSQL, enable automatic backups for peace of mind
 
 ### Content Tips
 1. **Watch What You Want**: Unlike the Spotify widget, Trakt doesn't have a "private mode," so everything shows
 2. **Embrace It**: The realness of showing actual watch history (not curated) makes it more genuine
-3. **TV Episode Details**: The S1E1 format is instantly recognizable—don't overthink it
+3. **TV Episode Details**: The S1E1 format is instantly recognizable - don't overthink it
 
 ## What's Next?
 Once you have the basic implementation working, consider these enhancements:
@@ -539,8 +539,8 @@ npm install react-icons
 ```
 
 ## Closing Thoughts
-Building this Trakt widget taught me that the best portfolio pieces aren't always the most technically complex—they're the ones that show **who you are** as a person. Yes, the OAuth flow and caching strategy are solid engineering, but what makes this special is that it's *real*. 
+Building this Trakt widget taught me that the best portfolio pieces aren't always the most technically complex - they're the ones that show **who you are** as a person. Yes, the OAuth flow and caching strategy are solid engineering, but what makes this special is that it's *real*. 
 
-When someone visits my portfolio and sees I just watched a classic film noir or binged a sci-fi series, it creates an instant connection. We're not just developer and visitor anymore—we're two people who might geek out about the same shows.
+When someone visits my portfolio and sees I just watched a classic film noir or binged a sci-fi series, it creates an instant connection. We're not just developer and visitor anymore we're two people who might geek out about the same shows.
 
 Plus, there's something deeply satisfying about building a system that authenticates once and then just works forever. No maintenance, no manual token refresh, just set it and forget it. That's the kind of engineering I love.

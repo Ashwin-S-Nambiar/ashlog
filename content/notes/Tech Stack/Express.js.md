@@ -61,8 +61,8 @@ app.listen(5000, () => console.log('Server running on port 5000'));
 * Easily integrates with databases, authentication, and cloud services
 
 ## Limitations
-* Minimal structure — requires manual setup for large-scale projects
-* Lacks built-in support for advanced features (e.g., ORM, validation, security) — must rely on third-party middleware
+* Minimal structure requires manual setup for large-scale projects
+* Lacks built-in support for advanced features (e.g., ORM, validation, security) must rely on third-party middleware
 * Performance may lag behind specialized frameworks in high-load environments
 
 ## Purpose

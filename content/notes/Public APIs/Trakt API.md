@@ -20,9 +20,9 @@ Documentation: [Trakt API Docs](https://trakt.docs.apiary.io)
 Trakt uses **OAuth 2.0** for authentication and user-specific actions.
 
 ### Common OAuth Flows
-* **Authorization Code Flow** — Required for user-based endpoints (read/write to watch history, lists, etc.).
-* **Device Code Flow** — Ideal for devices or apps without a web browser.
-* **API Key (Client ID)** — For public endpoints (metadata, trending, etc.), no user auth required.
+* **Authorization Code Flow** Required for user-based endpoints (read/write to watch history, lists, etc.).
+* **Device Code Flow** Ideal for devices or apps without a web browser.
+* **API Key (Client ID)** For public endpoints (metadata, trending, etc.), no user auth required.
 
 Include credentials in headers:
 
@@ -87,18 +87,16 @@ Sample JSON Response (simplified):
 
 ## Advantages & Limitations
 **Advantages**
-
 * Rich metadata for both movies and TV shows
 * Easy integration for personal projects or dashboards
 * Supports both user and public endpoints
 * Active community with existing client libraries (JavaScript, Python, etc.)
 
 **Limitations**
-
 * Some endpoints require **OAuth user authentication**
 * Strict rate limiting
 * Limited official SDKs (you often have to build requests manually)
 
 ## Purpose
-This API can be used to **show your currently watched movie or series** directly on your portfolio or website — adding a personal, dynamic touch similar to “Now Playing on Spotify.”
+This API can be used to **show your currently watched movie or series** directly on your portfolio or website adding a personal, dynamic touch similar to “Now Playing on Spotify.”
 You can see it in action via integration with Trakt data, e.g. “Currently Watching: *Dune: Part Two*” embedded in your portfolio.
