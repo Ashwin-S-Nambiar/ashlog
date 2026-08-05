@@ -101,7 +101,6 @@
   "devDependencies": {
     "@types/d3": "^7.4.3",
     "@types/hast": "^3.0.5",
-    "@types/js-yaml": "^4.0.9",
     "@types/lozad": "^1.16.4",
     "@types/node": "^26.1.2",
     "@types/pretty-time": "^1.1.5",
