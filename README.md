@@ -10,4 +10,4 @@ This website serves as a collection of my notes, thoughts, and learnings across 
 
 This site is powered by [Quartz v4](https://github.com/jackyzha0/quartz) - a powerful static site generator designed for publishing digital gardens and notes as websites.
 
-🔗 Read the documentation here to get started: https://quartz.jzhao.xyz/
+Read the documentation here to get started: https://quartz.jzhao.xyz/
