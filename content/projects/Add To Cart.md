@@ -7,7 +7,7 @@ tags: [projects, javascript, html, css, firebase, web-app, portfolio]
 ## Overview
 **Add To Cart** is a mobile-first shopping list application designed for simplicity and convenience. It leverages [[notes/Tech Stack/Firebase]] for real-time updates and cloud storage, ensuring that lists are instantly synchronized and never lost. Built with core web technologies, it focuses on responsive layouts and a clean, tile-based design for quick usability within [[notes/Web Development]].
 
-Live: **[add-to-cart.ashwin.co.in](https://add-to-cart.ashwin.co.in)**  
+Live: **[cart.ashwin.co.in](https://cart.ashwin.co.in)**  
 Source code: **[View Repository](https://github.com/Ashwin-S-Nambiar/add-to-cart)**
 
 ## Goals & Problems Solved

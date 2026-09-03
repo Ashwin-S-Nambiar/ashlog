@@ -7,7 +7,7 @@ tags: [projects, react, javascript, portfolio, experiments, movie-app]
 ## Overview
 MovieVault is a front-end web application designed to make it easier for users to discover movies, view details, and maintain a personal watchlist. By leveraging the [[notes/Public APIs/TMDB API]], the app provides access to movie plots, release years, genres, and other metadata. Smooth animations powered by [[notes/Tech Stack/Motion]] (previously as **Framer Motion**), along with responsive design via [[notes/Tech Stack/TailwindCSS]], deliver a polished and engaging user experience. Earlier version used [[notes/Public APIs/OMDb]], due to it's downtime I migrated to TMDB.
 
-Live: **[movie-watchlist.ashwin.co.in](https://movie-watchlist.ashwin.co.in)**  
+Live: **[movievault.ashwin.co.in](https://movievault.ashwin.co.in)**  
 Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**  
 
 ## Goals & Problems Solved

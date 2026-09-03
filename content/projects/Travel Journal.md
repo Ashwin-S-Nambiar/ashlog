@@ -9,7 +9,7 @@ Travel Journal is a visually polished, responsive web app built with [[notes/Tec
 
 A smooth, card-based layout, theme toggle, built-in search, and tag-based filtering make the experience intuitive and fast across devices.
 
-Live: **https://travel-journal.ashwin.co.in**  
+Live: **https://travel.ashwin.co.in**  
 Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Travel-Journal-App)**
 
 ## Goals & Problems Solved
