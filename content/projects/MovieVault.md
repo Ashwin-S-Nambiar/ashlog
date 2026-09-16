@@ -65,6 +65,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
   • *Case* / *OpenCase*: the DVD case, and the version on the detail page that opens to reveal the disc.
   • *Connected*: previous and next titles plus the franchise strip.
   • *Providers*, *ServicesSheet*: where to watch, and picking your services and region.
+  • *SettingsSheet*: appearance and the live TMDB connection status, opened from the gear in the header.
   • *Sheet*, *Toaster*, *StatusPill*: drag-to-dismiss sheets, undoable toasts and the API status pill.
   • *Img*: image loading with preview sizes, and keeping recently shown images warm so returning pages paint immediately.
 - **Library** (`src/lib`):
@@ -121,5 +122,8 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 ### Your Vault
 ![Saved films and series with where each one streams](./assets/movievault-vault.webp)
 
-### Services and Settings
+### Your Services
 ![Picking streaming services in the services sheet](./assets/movievault-services.webp)
+
+### Settings
+![The settings sheet with appearance and the TMDB connection](./assets/movievault-settings.webp)
