@@ -1,7 +1,7 @@
 ---
 title: MovieVault
 author: Ashwin S. Nambiar
-date: 2025-09-21
+date: 2026-09-15
 updated: 2026-09-15
 tags: [projects, react, javascript, portfolio, experiments, movie-app, streaming, view-transitions]
 ---

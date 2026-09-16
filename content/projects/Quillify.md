@@ -1,7 +1,7 @@
 ---
 title: Quillify
 author: Ashwin S. Nambiar
-date: 2025-09-22
+date: 2025-12-12
 tags: [projects, nextjs, react, javascript, portfolio, experiments, blog-app]
 ---
 ## Overview

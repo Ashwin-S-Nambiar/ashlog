@@ -1,7 +1,7 @@
 ---
 title: Color Scheme Generator
 author: Ashwin S. Nambiar
-date: 2025-09-27
+date: 2025-11-18
 tags: [projects, javascript, html, css, api, portfolio, experiments]
 ---
 

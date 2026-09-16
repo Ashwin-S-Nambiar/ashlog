@@ -1,7 +1,7 @@
 ---
 title: Tenzies
 author: Ashwin S. Nambiar
-date: 2025-09-29
+date: 2025-11-26
 tags: [projects, react, vite, framer-motion, javascript, css, games, portfolio]
 ---
 ## Overview
