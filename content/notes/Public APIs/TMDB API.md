@@ -40,7 +40,7 @@ TMDB enforces rate limiting; check the docs for the current limits and best prac
 ## Use Cases & Integration
 * Enrich a Trakt or personal watch widget with high-quality poster images and metadata.
 * Build search and discovery UIs (autocomplete search boxes, trending lists).
-* Power a full streaming guide like [[projects/MovieVault]]: search across films, series and anime, detail pages with cast and crew, collections for franchises, and `watch/providers` for where each title streams.
+* Power a full streaming guide like [[projects/MovieVault]]: search across films, series, anime and people, detail pages with cast and crew, collections for franchises, episode groups for splitting long anime seasons, person, company and keyword pages, and `watch/providers` for where each title streams.
 * Use `configuration` once at app startup to determine supported image sizes and base URL for cacheable poster requests.
 
 ## Example: Get Movie Details
