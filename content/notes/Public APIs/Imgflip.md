@@ -50,5 +50,5 @@ POST https://api.imgflip.com/caption_image
 * **Premium**: \~\$9.99/month, unlocks watermark-free memes, full search, GIF support, and AI meme generation
 
 ## Purpose
-Imgflip is widely used in meme generators such as [[projects/Meme Generator]], social media bots, and interactive applications where humor and viral content are central.
+Imgflip is widely used in meme generators such as [[projects/Pasteup]], social media bots, and interactive applications where humor and viral content are central.
 
