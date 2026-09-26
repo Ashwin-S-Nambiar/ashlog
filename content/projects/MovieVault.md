@@ -2,7 +2,7 @@
 title: MovieVault
 author: Ashwin S. Nambiar
 date: 2026-09-15
-updated: 2026-09-17
+updated: 2026-09-26
 tags: [projects, react, javascript, portfolio, experiments, movie-app, streaming, view-transitions]
 ---
 ## Overview
@@ -34,6 +34,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 | **Logic / State**     | [[notes/Tech Stack/JavaScript]]                            | A cached query hook, persisted stores and API status tracking                       |
 | **Data API**          | [[notes/Public APIs/TMDB API]]                             | Titles, collections, seasons, episode groups, people, studios, videos and providers |
 | **Icons / Tooling**   | Tabler Icons, Biome                                        | Icon set, linting and formatting                                                    |
+| **Hosting**           | Vercel rewrites                                            | TMDB and its images served through the site's own domain and cached at the edge     |
 
 ## Key Features & UX Flow
 1. **The Reel**

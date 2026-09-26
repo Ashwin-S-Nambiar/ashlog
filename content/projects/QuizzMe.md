@@ -1,111 +1,122 @@
 ---
-title: QuizzMe
+title: QuizzMe!
 author: Ashwin S. Nambiar
-date: 2025-12-20
-tags: [projects, react, javascript, portfolio, experiments, quiz-app]
+date: 2026-09-25
+updated: 2026-09-26
+tags: [projects, react, javascript, tailwindcss, motion, portfolio, experiments, quiz-app]
 ---
 ## Overview
-QuizzMe is a front-end only web app built with [[notes/Tech Stack/React]] and [[notes/Tech Stack/Vite]]. Users configure a quiz via multiple options (category, difficulty, number of questions, question type), then answer a set of trivia questions fetched from the [[notes/Public APIs/Open Trivia DB]] API. After completing, they receive their score, and perfect scores trigger a confetti animation. The app includes dark / light mode support (persisted), smooth transitions, and checks for [[notes/API]] availability before starting a quiz.  
+QuizzMe! is a trivia app for quick rounds on 24 topics. Pick a topic, a difficulty and how many questions, then play with each answer shown as you go or all of them held back until the end. Every round ends on a breakdown of how it went, and the questions you missed can be replayed on their own. It is built with [[notes/Tech Stack/React]] 19, [[notes/Tech Stack/TailwindCSS]] 4, [[notes/Tech Stack/Motion]] and [[notes/Tech Stack/Vite]] 8, with every topic, count and question coming from the [[notes/Public APIs/Open Trivia DB]].
+
+The first version was a practice run at fetching data in React: a form of dropdowns, one round and a score. This rebuild keeps the idea and asks what a quiz should actually feel like to play, from picking a topic to seeing what you got wrong. There is no server and no account; scores stay in your browser.
 
 Live: **[quizzme.ashwin.co.in](https://quizzme.ashwin.co.in)**  
-Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/QuizzMe)**
+Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/QuizzMe)**  
 
 ## Goals & Problems Solved
-- **Configurable Quiz Experience**: let users control category, difficulty, question type, and count.  
-- **Reliability**: ensure the app detects if the Trivia DB API is unreachable (down or network issues) and handles gracefully.  
-- **Quality UX**: responsive design for various devices, theme support, animations to make the experience polished.  
-- **Correctness of Content**: decode HTML entities that Trivia DB returns in questions/answers so they render cleanly.  
-- **Immediate Feedback & Engagement**: score reveal, and reward (confetti) for perfect score to motivate.
+- **Live Topics and Counts**: Every topic shows how many questions it really has, and amounts cap at what exists, so a round never asks for more than the API can give.
+- **Living With the Rate Limit**: Open Trivia DB allows one question request every five seconds. Requests queue, and the loading screen says how long the wait is instead of spinning.
+- **No Repeats**: A session token rides along with every request, so back to back rounds don't serve the same questions.
+- **Two Ways to Play**: See each answer as you go with streaks, or reveal them all at the end with free movement between questions.
+- **A Proper Ending**: A score ring, best streak, average time, a split by difficulty and a review of every answer.
+- **Practice What You Missed**: Replay only the wrong ones, reshuffled, without another API call.
 
 ## Architecture & Tech Stack
-
-| Layer                      | Technology / Library                                                        | Purpose                                                 |
-| -------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Framework / Build**      | React, Vite                                                         | Component-based UI, fast dev server & build speeds.     |
-| **State / Hooks**          | Built-in React state & hooks, plus **React-Use** for custom reusable hooks. |                                                         |
-| **Unique IDs**             | Nano ID                                                                     | For keying lists, handling unique identifiers.          |
-| **Data API**               | Open Trivia DB                                                         | Source of quiz questions.                               |
-| **HTML Entities Handling** | html-entities package                                                       | To decode HTML entity encodings in questions / answers. |
-| **Visual / Animation**     | [[notes/Tech Stack/CSS]] animations / transitions; React-Confetti; theme toggle transitions. |                                                         |
-| **Persistence**            | localStorage                                                                | For storing theme preference etc.                       |
-| **Responsive Design**      | CSS3 + responsive layouts / breakpoints                                     | For mobile / tablet / desktop usability.                |
+| Layer                 | Technology / Library                                              | Purpose                                                                  |
+| --------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Framework / Build** | [[notes/Tech Stack/React]] 19, [[notes/Tech Stack/Vite]] 8        | No router: the screens are state, and the URL only carries a shared setup |
+| **Styling**           | [[notes/Tech Stack/TailwindCSS]] 4                                | OKLCH theme tokens with light and dark sets                              |
+| **Motion**            | [[notes/Tech Stack/Motion]], View Transitions API, canvas-confetti | Question transitions, sheets and springs, the theme switch, good rounds  |
+| **Logic / State**     | [[notes/Tech Stack/JavaScript]], `useSyncExternalStore`           | Pure quiz functions with tests, and small persisted stores               |
+| **Data API**          | [[notes/Public APIs/Open Trivia DB]]                              | Topics, counts, session tokens and questions                             |
+| **Sound**             | Web Audio API                                                     | Every click, chime and buzz synthesized on the spot                      |
+| **Icons / Tooling**   | Phosphor Icons, Biome, `node --test`                              | Icon set, linting and formatting, tests for the quiz logic               |
 
 ## Key Features & UX Flow
-1. **Quiz Setup Screen**  
-   - User selects number of questions, category, difficulty, type.  
-   - Theme toggle and detection of API status check happen before allowing quiz to begin.  
+1. **Setup**
+   - One card: pick a topic, a difficulty and how many questions, and go. Everything else folds into more options, and surprise me picks a topic for you.
+   - Topics open in a sheet of colour-coded tiles, each with its own icon and question count, and the numbers roll into place like an odometer.
+   - More options hold the question type, when answers are shown, and an optional 15 or 30 second timer.
 
-2. **Fetching & Data Handling**  
-   - On quiz start, fetch questions via API call (with the parameters).  
-   - Decode HTML entities so punctuation / special chars show properly.  
-   - Use unique IDs for options / answers to manage state.  
+2. **Play**
+   - One question at a time. Answer as you go and a streak chip builds with each right answer, or hold every answer until the end and jump between questions from the progress segments.
+   - `1` to `4` or `A` to `D` to answer, `Enter` or `→` for next, `←` to go back in reveal at the end mode, `Esc` to leave.
+   - Mid-round, the back button opens the quit sheet instead of throwing the round away.
 
-3. **Quiz Interaction**  
-   - Present one question at a time (or all together?) with selectable options.  
-   - On selecting answer, store whether correct.  
+3. **Results**
+   - A score ring, best streak, average time, a split by difficulty, and every answer to look back through.
+   - Practice the ones you missed, or share a green and red grid through the share sheet with a link that opens the same setup.
+   - Confetti for the good rounds, loaded only when it is needed.
 
-4. **Result / Score Reveal**  
-   - At end, show score, highlight correct / incorrect answers.  
-   - Trigger a **confetti animation** if perfect score.  
+4. **Stats**
+   - Rounds, accuracy, best streak and accuracy by topic, from your last hundred rounds on this device.
 
-5. **Persistent Preferences**  
-   - Theme choice saved in localStorage, so revisit has same theme.  
-
-6. **Responsiveness and Accessibility**  
-   - UI adjusts for screen sizes; inputs / buttons tappable on touch devices.  
-   - Probably focus / hover states etc for usability.  
+5. **404**
+   - A question too: where did this page go?
 
 ## Code Walkthrough & Notable Modules
-Here are some of the modules / files that stand out:
-- **`src/App.jsx` / main entry**: handles routing between quiz setup, quiz in progress, and result.  
-- **Components**:  
-    • *QuizSetup / Options* component: handles form inputs for selecting quiz parameters.  
-    • *QuestionBoard* / *QuizQuestion* component(s): displays question, choices, handles selection. 
-    • *ScoreBoard / Result* component: show summary, score, perhaps correct vs incorrect.  
-- **Utility modules**:  
-    • HTML-entities decoder function to sanitize API text.  
-    • NanoID usage for keying, especially in mapping options.  
-- **Hooks**: usage of React-Use for common hooks (possibly window / theme toggles, effects).  
-- **API status check**: before starting quiz, a check to ensure Trivia DB is reachable (maybe fetching some status endpoint or simple fetch).  
+- **Components** (`src/components`):
+  • *Setup*, *Play*, *Results*: the three screens, with play, results and the 404 split out and loaded when needed.
+  • *StatsSheet*, *Sheet*: the stats and topic sheets, dragged to dismiss on phones.
+  • *Stickers*: the draggable stickers on the landing.
+  • *RollingNumber*: each digit a strip of 0 to 9 that slides to its value, with the plain number for screen readers.
+  • *Topbar*, *BottomBar*, *Toaster*, *Loading*: the bars, toasts and the counting-down loading screen. The bottom bars are portalled to `body` so they stay fixed inside animated screens.
+- **Library** (`src/lib`):
+  • *opentdb.js*: the Open Trivia DB client, with one promise-chain queue 5.2 s apart, a last-request time kept in `localStorage` so a reload can't earn a 429, retries that know why they failed, and a token kept warm for five and a half hours.
+  • *quiz.js* / *quiz.test.js*: pure quiz logic and its tests.
+  • *categories.js*: topic names, colours and icons.
+  • *store.js*: persisted stores for preferences, stats and the rate limit clock.
+  • *sound.js*: synthesized sounds, with a chime that climbs a semitone for each answer in a streak.
 
 ## UI / Responsiveness & Design Decisions
-- Clean, simple layout: minimal distractions.  
-- Theme toggle (light / dark) with smooth transitions, for comfort of different users.  
-- Animations: hover effects, clickable feedback, confetti for perfect scores makes the experience more engaging without going overboard.  
-- Breakpoints: mobile small (~320px), mobile medium, tablet, laptop, large screens. Ensures readability and touch-friendly controls.  
-- Use of HTML-entities package to avoid awkward rendering of entities like &quot;, &amp;, etc.
+- **Restraint**: a warm off-white ground, near-black ink, one indigo accent, and green and red kept for right and wrong.
+- **Stickers for Play**: pastel butter, sky, mint, lilac and peach, each topic with its own colour and duotone icon.
+- **Typography**: Bricolage Grotesque for the big lines, Geist for everything else, Geist Mono for numbers.
+- **One Screen, Any Screen**: the landing fits above the fold from an iPhone SE up to desktop, with a short variant for low viewports.
+- **Phone First**: 44 px touch targets, safe-area padding, actions pinned to the bottom where thumbs are, and sheets you can throw.
+- **Nothing Jumps**: self-hosted, preloaded fonts with metric-matched fallbacks, so layout shift measures 0.
+- **Light and Dark**: follows the system until you choose; choose, and the new theme grows out of the toggle in a circle.
+- **Accessible**: keyboard control for everything, and movement becomes fades when the system asks for reduced motion.
 
 ## Challenges & Learnings
-- Handling HTML entities clearly: ensuring that all content from the API is decoded correctly, especially for special characters.  
-- Managing asynchronous behavior: fetch latency, handling API errors, ensuring UI shows loading / error states.  
-- State consistency: making sure selecting answers, going back/forward (if supported), and score tallying are bug-free.  
-- Design balance: making features like confetti / animations engaging but not distracting or heavy, especially for users on lower bandwidth or mobile.  
-- Responsiveness: ensuring layout works in smallest screens, touch interactions, readable font sizes.  
+- Designing around an API's limits instead of hiding them: a queue, a clock that survives a reload, and a loading screen that tells the truth.
+- Not serving repeats, and knowing what to do when a mix runs dry.
+- Keeping quiz logic in pure, tested functions, so the UI only ever reads state.
+- Keeping the question card steady when questions and answers vary wildly in length.
+- Using Motion for presence, layout and springs, and CSS for everything else.
+- Synthesizing small sounds with the Web Audio API, and waiting until a browser lets audio start.
+- Bottom bars that stay fixed inside animated screens and clear the home indicator on phones.
 
 ## Future Improvements
-Here are areas to consider expanding:
-- **Accessibility improvements**: better keyboard navigation, ARIA attributes, color contrast audits.  
-- **Pagination / One question per screen vs all together**: consider different modes (quiz flow).  
-- **Timer mode**: give users timed quizzes.  
-- **More feedback**: after each question, show correct answer / explanation.  
-- **Persistence of quiz progress**: allow resume if user reloads or loses session.  
-- **User accounts / scoring history**: store past quizzes, leaderboards.  
-- **Offline support**: quiz caching, fallbacks.  
-- **Performance optimization**: lazy-loading components, reducing bundle size etc.  
+- **Daily Round**: the same questions for everyone, once a day.
+- **Head to Head**: rounds with a friend from one link.
+- **Sync**: stats that follow you across devices.
 
 ## Screens & Visuals
-### Quiz Setup (Light Theme)
 
-![Landing Page Light](https://github.com/user-attachments/assets/46b8d8c9-8b40-4c20-9668-057ec5d7abc9)
+### Home
+![The landing with draggable stickers and the round card](./assets/quizzme-home.webp)
 
-### Quiz Setup (Dark Theme)
+### Topic Picker
+![Every topic as a colour-coded tile with its icon and question count](./assets/quizzme-topics.webp)
 
-![Landing Page Dark](https://github.com/user-attachments/assets/2e0fa692-1295-4915-84f2-45b47228e29e)
+### More Options
+![The round card with more options open: mode, timer and question type](./assets/quizzme-options.webp)
 
-### Question in Progress
+### Streak
+![A right answer with a three in a row streak chip](./assets/quizzme-streak.webp)
 
-![Quiz Questions Light](https://github.com/user-attachments/assets/7d5bf1b9-809a-4d6d-81ac-8d0bff18f728)
+### Wrong Answer
+![A wrong answer marked with the right one shown](./assets/quizzme-wrong.webp)
 
-### Quiz Result
+### Reveal at the End
+![Reveal at the end mode with the chosen answer outlined and the progress segments](./assets/quizzme-reveal.webp)
 
-![Score Reveal](https://github.com/user-attachments/assets/3d4080bc-e72e-4bed-b7d9-bdaffacdc20e)
+### Results and Review
+![The results ring, best streak, split by difficulty and one missed question opened](./assets/quizzme-results.webp)
+
+### Your Stats
+![Rounds, accuracy, best streak and accuracy by topic](./assets/quizzme-stats.webp)
+
+### 404
+![The 404 asked as a quiz question](./assets/quizzme-404.webp)

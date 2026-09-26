@@ -37,4 +37,4 @@ GET https://opentdb.com/api.php?amount=5&category=18&difficulty=medium
 * Limited to trivia/quiz use cases
 
 ## Purpose
-OpenTDB is commonly used to power trivia games, quiz apps, and educational tools. In projects like [[projects/QuizzMe!]], it acts as the main data provider, simplifying quiz creation without requiring developers to manually curate large datasets.
+OpenTDB is commonly used to power trivia games, quiz apps, and educational tools. In projects like [[projects/QuizzMe|QuizzMe!]], it acts as the main data provider, simplifying quiz creation without requiring developers to manually curate large datasets.
