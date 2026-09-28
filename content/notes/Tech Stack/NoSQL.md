@@ -23,4 +23,4 @@ tags: [nosql, database, web, backend, data]
 - Requires careful planning to avoid unstructured, inconsistent data.  
 
 ## Purpose
-NoSQL databases are best suited for **modern, distributed applications** where rapid scaling and flexible data structures are critical. Example: [[projects/Quillify]] uses MongoDB, a document-oriented NoSQL database.
+NoSQL databases are best suited for **modern, distributed applications** where rapid scaling and flexible data structures are critical. Example: [[projects/Redline]] began on MongoDB, a document-oriented NoSQL database, back when it was a blog called Quillify.

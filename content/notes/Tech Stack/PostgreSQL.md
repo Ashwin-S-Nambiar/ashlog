@@ -60,3 +60,5 @@ console.log(result.rows[0]);
 
 ## Purpose
 PostgreSQL is ideal for **production-grade applications** that demand **data consistency**, **complex relationships**, and **strong transactional guarantees**.
+
+[[projects/Redline]] keeps its projects and releases in PostgreSQL on [Neon](https://neon.com), with each release's changes in a JSONB column.

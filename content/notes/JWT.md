@@ -26,4 +26,4 @@ A JWT consists of three parts, separated by dots (`.`):
 - Revocation is difficult without additional infrastructure.  
 
 ## Purpose
-JWT simplifies **authentication and authorization** workflows in modern applications, making it a popular choice for APIs, [[notes/Tech Stack/Next.js]] backends, and single-page applications like Quillify.
+JWT simplifies **authentication and authorization** workflows in modern applications, making it a popular choice for APIs, [[notes/Tech Stack/Next.js]] backends, and single-page applications like the admin in [[projects/Redline]].

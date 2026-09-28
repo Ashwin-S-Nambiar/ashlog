@@ -1,113 +1,111 @@
 ---
-title: Quillify
+title: Redline
 author: Ashwin S. Nambiar
-date: 2025-12-12
-tags: [projects, nextjs, react, javascript, portfolio, experiments, blog-app]
+date: 2026-09-28
+updated: 2026-09-28
+aliases: [projects/Quillify]
+tags: [projects, nextjs, react, javascript, tailwind, postgresql, changelog, portfolio]
 ---
 ## Overview
-Quillify is a blogging web application that allows users to register, log in, and create blog posts with a WYSIWYG editor. It features secure [[notes/Authentication|authentication]] with [[notes/JWT]] and bcrypt, supports an admin panel for managing blogs and subscriptions, and offers responsive design optimized for all devices. As a full-stack project, it demonstrates integration of modern frontend frameworks, backend logic, and database persistence within [[notes/Web Development]].
+Redline is the changelog for everything I build. Every release of every project sits in one register, newest first, with what was added, changed, fixed and removed. Each project has its own page and its own Atom feed, and a small admin is where I write them. It is built with [[notes/Tech Stack/Next.js]], [[notes/Tech Stack/React]], [[notes/Tech Stack/TailwindCSS]] and [[notes/Tech Stack/Motion]], with the data in [[notes/Tech Stack/PostgreSQL]] on [Neon](https://neon.com).
 
-Live: **[quillify.ashwin.co.in](https://quillify.ashwin.co.in)**  
-Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Quillify)** 
+The first version was Quillify, a blog with categories, an email box to subscribe and an admin panel to write posts. [[projects/BlogSpace]] is a blog too, and two was one too many, so the rebuild turned it into the place that keeps track of the rest. The notes here say what each project is; Redline says what changed and when.
+
+Live: **[redline.ashwin.co.in](https://redline.ashwin.co.in)**  
+Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Redline)**  
 
 ## Goals & Problems Solved
-- **Secure Authentication**: User registration and login with password hashing and token-based sessions.  
-- **Rich Content Creation**: WYSIWYG editor allows formatting text, creating structured blog content.  
-- **Responsive UI**: Accessible across desktops, tablets, and mobile devices.  
-- **Smart Formatting**: Human-readable publish dates enhance readability.  
-- **Admin Tools**: Admin dashboard for managing blogs and subscriptions.  
-- **Feedback & Notifications**: Toast notifications improve interactivity and communication.  
+- **One Place for Changes**: Every rebuild, rename and fix across my projects, dated and in order.
+- **Read It Your Way**: All projects or one, and only the kind of change you care about.
+- **Follow Without an Account**: An Atom feed for everything and one per project, no email list.
+- **Quick to Write**: A draft from the project's commits, so a release takes minutes to note down.
+- **Nothing Jumps**: No layout shift on load or while you use it.
 
 ## Architecture & Tech Stack
-| Layer                 | Technology / Library     | Purpose                                                     |
-| --------------------- | ------------------------ | ----------------------------------------------------------- |
-| **Framework / Build** | [[notes/Tech Stack/Next.js]], [[notes/Tech Stack/React]], [[notes/Tech Stack/JavaScript]] | Core frontend and backend framework for rendering and routing |
-| **Styling**           | [[notes/Tech Stack/TailwindCSS]], [[notes/Tech Stack/CSS]] | Utility-first responsive styling and layout                 |
-| **Database**          | [[notes/Tech Stack/MongoDB]]                  | NoSQL database for flexible data storage                    |
-| **Authentication**    | JWT, bcryptjs            | Secure login, registration, and password encryption         |
-| **Hosting**           | Vercel                   | Deployment and continuous delivery platform                 |
-
+| Layer              | Technology / Library                                                                  | Purpose                                                          |
+| ------------------ | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Framework**      | [[notes/Tech Stack/Next.js]] 16, [[notes/Tech Stack/React]] 19                         | Prerendered pages and feeds, the admin and its server actions    |
+| **Style / Motion** | [[notes/Tech Stack/TailwindCSS]] 4, [[notes/Tech Stack/Motion]] 13, View Transitions  | The sheet, sheets and toasts, and morphs between pages           |
+| **Data**           | [[notes/Tech Stack/PostgreSQL]] on [Neon](https://neon.com)                            | Projects and releases, each release's changes as JSONB           |
+| **Auth**           | [[notes/JWT]] with jose, bcryptjs                                                      | One admin login in a signed cookie                               |
+| **Drafts**         | [GitHub API](https://docs.github.com/en/rest/commits)                                  | Commits since the last release, turned into a draft              |
+| **Notes**          | [marked](https://marked.js.org)                                                        | Markdown notes on a release                                      |
+| **Hosting**        | Vercel                                                                                 | Static pages rebuilt when a release is published                 |
 
 ## Key Features & UX Flow
-1. **User Authentication**  
-   - Login, registration, and password protection using JWT and bcrypt.  
+1. **The Register**
+   - Every release of every project, newest first. Each one is a revision: a number in a triangle, a version, a date, a title and its changes.
+   - The newest revision is circled in a red cloud that draws itself in when the page opens.
 
-2. **Blog Management**  
-   - Create, update, and view blog posts using a rich text editor.  
-   - Admin panel for managing all posts and subscriptions.  
+2. **Show Only**
+   - Tap Added, Changed, Fixed or Removed to see only those changes, across everything or one project. The counts show how many of each there are.
 
-3. **Subscriptions**  
-   - Track and manage blog subscriptions through admin dashboard.  
+3. **Drawings and Revisions**
+   - Each project has a page with what it is, links to the live site, the code and its note here, and its whole history.
+   - Each revision has its own page with its changes grouped, its notes and its commits, and older and newer links. `J` and `K` step through, `Esc` goes back up.
 
-4. **Responsive Design**  
-   - Fully adaptive layout ensures usability across devices.  
+4. **Follow**
+   - `/feed.xml` for everything and `/<project>/feed.xml` for one, with copy buttons for a feed reader.
 
-5. **Notifications**  
-   - Real-time toast notifications provide feedback for user actions.  
+5. **The Admin**
+   - Sign in, pick a project and draft from GitHub: the commits since the last release, sorted by their `feat` and `fix` prefixes, with the next version suggested.
+   - Rewrite them for people, watch the live preview of the row, and publish. The site updates straight away. Delete has undo.
 
 ## Code Walkthrough & Notable Modules
-- **`pages/`**: Next.js routing for blog pages, authentication, and admin dashboard.  
-- **Components**:  
-  • *Editor*: WYSIWYG editor for creating and editing blog posts.  
-  • *PostCard*: Displays blog post summaries on the home page.  
-  • *Admin Dashboard*: Manages blog entries and subscriptions.  
-  • *Auth Forms*: Handles login and registration.  
-- **API Routes**: Next.js [[notes/API]] routes handle authentication, CRUD operations, and database queries.  
-- **Database Integration**: MongoDB collections for users, posts, and subscriptions.  
-- **Security**: JWT-based authentication and bcrypt password hashing.  
+- **app/(site)/**: the register, project pages, revision pages and their feeds.
+- **app/admin/**: sign in, the list, the editor and projects, and `actions.js` with every write, each one checking the session.
+- **components/**:
+  • *Frame.jsx*, *Rail.jsx*, *TitleBlock.jsx*: the sheet with its zone numbers, the drawing list and the title block.
+  • *Revision.jsx*: one row, used by the register and the admin preview.
+  • *Legend.jsx*, *MobileHead.jsx*, *Sheet.jsx*: the filter, the phone header and the pull-up sheet.
+- **lib/**:
+  • *data.js*: reads projects and releases in two queries and numbers each project's revisions.
+  • *feed.js*: Atom.
+  • *session.js*: the signed admin cookie.
+- **scripts/**: the schema, the seed of every release so far, and the admin login.
 
 ## UI / Responsiveness & Design Decisions
-- Minimalist design to highlight blog content.  
-- TailwindCSS utilities ensure rapid iteration and mobile-first responsiveness.  
-- Clear layout for admin tools without overwhelming the main blog experience.  
-- Toast notifications enhance user experience with immediate feedback.  
+- **An Engineering Drawing**: That's where changes get marked. Drafting film with a pale blue grid, a frame with zone numbers, a drawing list, a register and a title block in the corner.
+- **Redlining**: Changes on a drawing are circled in red pencil and tagged with a numbered triangle. That red is the only colour.
+- **The Cloud in CSS**: A scalloped SVG as a border image, and a conic mask that sweeps round once. No JavaScript, so it's there in the first painted frame and fits any row.
+- **Typography**: Osifont, the lettering of technical drawings, for names and labels. Atkinson Hyperlegible Next for reading, Azeret Mono for versions, dates and commits.
+- **No Dark Mode**: Drawings are on film.
+- **Every Screen**: The full sheet on desktop; on tablets the side folds into a strip; on phones the frame goes and the drawing list moves into a sheet.
+- **Nothing Jumps**: Fonts are self-hosted with metric-matched fallbacks, and layout shift measures 0 on load and while you use it.
 
 ## Challenges & Learnings
-- Implementing secure authentication workflows with JWT and bcrypt.  
-- Designing a database schema in MongoDB that balances flexibility with performance.  
-- Integrating a WYSIWYG editor with React while maintaining data consistency.  
-- Building an admin panel that is functional yet simple to navigate.  
-- Ensuring responsive layouts scale properly across devices.  
+- Repurposing a blog into something that doesn't overlap another project, while keeping its admin and login.
+- Moving from MongoDB to PostgreSQL mid-rebuild: releases have fixed fields, and a free database that pauses after a month idle is a bad fit for a site that is only written to now and then.
+- A cloud that follows any row without measuring it in JavaScript: border images need an SVG with a real width and height, or the slices land in the wrong place.
+- React 19 resets a form after its action runs, which wiped the email after a wrong password until the field was made controlled.
+- Keeping the footer at the bottom of short pages without making long ones scroll twice.
 
 ## Future Improvements
-- **Media Uploads**: Support images and media embedding in blog posts.  
-- **User Profiles**: Author pages with bios and published articles.  
-- **Tagging & Categories**: Organize posts with tags and categories.  
-- **Search & Filtering**: Add robust search for blogs and authors.  
-- **Role-Based Access**: Differentiate admin and regular user capabilities.  
-- **Dark Mode**: Theme toggle for improved readability.  
+- **A Badge**: A small version badge any project can show, linking back to its page here.
+- **Links Both Ways**: Each release pointing to the matching section of its note.
 
 ## Screens & Visuals
-### Landing Page
-![Landing Page](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/LandingPage.png)
 
-### Adding Subscription
-![Adding Subscription1](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AddingSubscription-1.png)
-![Adding Subscription2](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AddingSubscription-2.png)
+### Home
+![The Redline sheet: the drawing list on the left, the register of revisions with the newest circled in red, and the title block bottom right](./assets/redline-home.webp)
 
-### Blog in Detail
-![BlogInDetail](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/BlogDetailPage.png)
+### Only Fixes
+![The register showing only fixes, with Fixed outlined in the show list](./assets/redline-fixes.webp)
 
-### Admin Login
-![AdminLogin1](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminLoginPage-1.png)
-![AdminLogin2](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminLoginPage-2.png)
-![AdminLogin3](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminLoginPage-3.png)
+### A Drawing
+![The Stampbook page: formerly Travel Journal, its links, and its revisions with the newest circled](./assets/redline-drawing.webp)
 
-### Adding New Blog
-![AddNewBlog1](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminAddProductPage-1.png)
-![AddNewBlog2](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminAddProductPage-2.png)
-![AddNewBlog3](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminAddProductPage-3.png)
-![AddNewBlog4](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminAddProductPage-4.png)
-![AddNewBlog5](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminAddProductPage-5.png)
+### A Revision
+![BlogSpace 2.0, rebuilt as a riso zine rack, with its changes grouped under added and changed and its commits](./assets/redline-revision.webp)
 
-### All Blog Details
-![BlogDetails](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminAllBlogs.png)
+### The Admin
+![The admin list of revisions with a filter by project and a new revision button](./assets/redline-admin.webp)
 
-### All Subscription Details
-![SubsDetails](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/AdminAllSubs.png)
+### Writing a Revision
+![The editor with a Tenzies 2.1 draft, an added and a fixed change, a note, and the live preview circled in red](./assets/redline-writing.webp)
 
-### 404 Page
-![404Page](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/404Page.png)
+### Projects
+![The admin projects page with the fields for Redline and BlogSpace](./assets/redline-projects.webp)
 
-### MongoDB Structure
-![MongoDB](https://raw.githubusercontent.com/Ashwin-S-Nambiar/Quillify/main/public/screenshots/MongoDB.png)
+### 404
+![Not in the set, with 404 circled in a red revision cloud](./assets/redline-404.webp)

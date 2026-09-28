@@ -56,4 +56,4 @@ const result = await posts.insertOne({
 * Schema flexibility can lead to inconsistent data if not managed carefully
 
 ## Purpose
-MongoDB is ideal for **modern, agile application development** where requirements evolve quickly. In projects like *Quillify*, it provides flexible storage for user accounts, blog posts, and subscriptions while integrating smoothly with Next.js APIs and [[notes/Authentication|authentication]] workflows.
+MongoDB is ideal for **modern, agile application development** where requirements evolve quickly. When [[projects/Redline]] was a blog called Quillify, it provided flexible storage for user accounts, blog posts, and subscriptions while integrating smoothly with Next.js APIs and [[notes/Authentication|authentication]] workflows.
