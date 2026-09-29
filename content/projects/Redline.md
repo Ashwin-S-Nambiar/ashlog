@@ -9,7 +9,7 @@ tags: [projects, nextjs, react, javascript, tailwind, postgresql, changelog, por
 ## Overview
 Redline collects selected changes across my projects in one register, newest first, with what was added, changed, fixed and removed. Each project page shows how many revisions are recorded and the dates they cover, with a link to the full commit history and an Atom feed. A small admin is where I write entries. It is built with [[notes/Tech Stack/Next.js]], [[notes/Tech Stack/React]], [[notes/Tech Stack/TailwindCSS]] and [[notes/Tech Stack/Motion]], with the data in [[notes/Tech Stack/PostgreSQL]] on [Neon](https://neon.com).
 
-The first version was Quillify, a blog with categories, an email box to subscribe and an admin panel to write posts. [[projects/BlogSpace]] is a blog too, and two was one too many, so the rebuild turned it into the place that keeps track of the rest. The notes here say what each project is; Redline says what changed and when.
+The first version was Quillify, a blog with categories, an email box to subscribe and an admin panel to write posts. [[projects/Inspect|BlogSpace]], now Inspect, is a blog too, and two was one too many, so the rebuild turned it into the place that keeps track of the rest. The notes here say what each project is; Redline says what changed and when.
 
 Live: **[redline.ashwin.co.in](https://redline.ashwin.co.in)**  
 Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Redline)**  
