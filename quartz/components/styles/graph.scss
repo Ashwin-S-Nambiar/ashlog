@@ -15,6 +15,10 @@
     position: relative;
     overflow: hidden;
 
+    @media (min-width: 1200px) and (max-height: 700px) {
+      height: 160px;
+    }
+
     & > .global-graph-icon {
       cursor: pointer;
       background: none;
