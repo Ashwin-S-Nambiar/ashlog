@@ -65,6 +65,17 @@ export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: Fo
   return fonts
 }
 
+async function fetchWithRetry(url: string, attempts = 3): Promise<Response> {
+  for (let i = 1; ; i++) {
+    try {
+      return await fetch(url)
+    } catch (error) {
+      if (i >= attempts) throw error
+      await new Promise((resolve) => setTimeout(resolve, 500 * i))
+    }
+  }
+}
+
 /**
  * Get the `.ttf` file of a google font
  * @param fontName name of google font
@@ -80,6 +91,13 @@ export async function fetchTtf(
   const cacheDir = path.join(QUARTZ, ".quartz-cache", "fonts")
   const cachePath = path.join(cacheDir, cacheKey)
 
+  // Fonts committed to the repo, so builds don't depend on Google Fonts being reachable
+  try {
+    return await fs.readFile(path.join(QUARTZ, "og-fonts", `${cacheKey}.ttf`))
+  } catch (error) {
+    // not bundled, fall through to the cache and network
+  }
+
   // Check if font exists in cache
   try {
     await fs.access(cachePath)
@@ -89,7 +107,7 @@ export async function fetchTtf(
   }
 
   // Get css file from google fonts
-  const cssResponse = await fetch(
+  const cssResponse = await fetchWithRetry(
     `https://fonts.googleapis.com/css2?family=${fontName}:wght@${weight}`,
   )
   const css = await cssResponse.text()
@@ -109,7 +127,7 @@ export async function fetchTtf(
   }
 
   // fontData is an ArrayBuffer containing the .ttf file data
-  const fontResponse = await fetch(match[1])
+  const fontResponse = await fetchWithRetry(match[1])
   const fontData = Buffer.from(await fontResponse.arrayBuffer())
   await fs.mkdir(cacheDir, { recursive: true })
   await fs.writeFile(cachePath, fontData)
