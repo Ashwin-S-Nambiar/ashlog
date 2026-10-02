@@ -21,7 +21,7 @@
   },
   "engines": {
     "npm": ">=10.9.2",
-    "node": ">=22"
+    "node": "24.x"
   },
   "keywords": [
     "site generator",
@@ -111,5 +111,10 @@
     "prettier": "^3.9.9",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.6": true,
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true
   }
 }
