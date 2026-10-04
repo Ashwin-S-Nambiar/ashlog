@@ -2,7 +2,7 @@
 title: Inspect
 author: Ashwin S. Nambiar
 date: 2026-09-29
-updated: 2026-09-29
+updated: 2026-10-04
 aliases: [projects/BlogSpace]
 tags: [projects, astro, mdx, typescript, css, blogging, writing, portfolio]
 ---

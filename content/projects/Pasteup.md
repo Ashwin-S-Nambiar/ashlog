@@ -2,7 +2,7 @@
 title: Pasteup
 author: Ashwin S. Nambiar
 date: 2026-09-26
-updated: 2026-09-26
+updated: 2026-10-04
 aliases: [projects/Meme-Generator]
 tags: [projects, react, javascript, tailwindcss, motion, canvas, api, portfolio, experiments, meme-app]
 ---

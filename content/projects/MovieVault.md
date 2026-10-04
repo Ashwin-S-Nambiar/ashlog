@@ -2,7 +2,7 @@
 title: MovieVault
 author: Ashwin S. Nambiar
 date: 2026-09-15
-updated: 2026-09-26
+updated: 2026-10-04
 tags: [projects, react, javascript, portfolio, experiments, movie-app, streaming, view-transitions]
 ---
 ## Overview
@@ -154,7 +154,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/MovieVault)**
 ![Picking streaming services in the services sheet](./assets/movievault-services.webp)
 
 ### Settings
-![The settings sheet with appearance and the TMDB connection](./assets/movievault-settings.webp)
+![The settings sheet with theme, title language, watch apps and the TMDB connection](./assets/movievault-settings.webp)
 
 ### Person Page
 ![Tom Hanks with his films, series, years active, bio and links out](./assets/movievault-person.webp)

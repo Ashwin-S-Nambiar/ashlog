@@ -2,7 +2,7 @@
 title: Stampbook
 author: Ashwin S. Nambiar
 date: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-04
 aliases: [projects/Travel-Journal]
 tags: [projects, react, javascript, tailwind, maps, indexeddb, portfolio, web-app]
 ---

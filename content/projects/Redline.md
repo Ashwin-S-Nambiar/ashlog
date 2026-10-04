@@ -2,7 +2,7 @@
 title: Redline
 author: Ashwin S. Nambiar
 date: 2026-09-28
-updated: 2026-09-29
+updated: 2026-10-04
 aliases: [projects/Quillify]
 tags: [projects, nextjs, react, javascript, tailwind, postgresql, changelog, portfolio]
 ---
@@ -96,7 +96,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Redline)**
 ![The Stampbook page: formerly Travel Journal, its links, and its revisions with the newest circled](./assets/redline-drawing.webp)
 
 ### A Revision
-![BlogSpace 2.0, rebuilt as a riso zine rack, with its changes grouped under added and changed and its commits](./assets/redline-revision.webp)
+![Inspect 3.0, BlogSpace is now Inspect, with its changes grouped under added, changed and removed and its commits](./assets/redline-revision.webp)
 
 ### The Admin
 ![The admin list of revisions with a filter by project and a new revision button](./assets/redline-admin.webp)
@@ -105,7 +105,7 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Redline)**
 ![Editing Tenzies 2.0.1, with its fixed and changed entries and a live preview circled in red](./assets/redline-writing.webp)
 
 ### Projects
-![The admin projects page with the fields for Redline and BlogSpace](./assets/redline-projects.webp)
+![The admin projects page with the fields for MovieVault and Portfolio](./assets/redline-projects.webp)
 
 ### 404
 ![Not in the set, with 404 circled in a red revision cloud](./assets/redline-404.webp)

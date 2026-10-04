@@ -2,12 +2,12 @@
 title: Fandeck
 author: Ashwin S. Nambiar
 date: 2026-09-26
-updated: 2026-09-26
+updated: 2026-10-04
 aliases: [projects/Color-Scheme-Generator]
 tags: [projects, javascript, html, css, api, portfolio, experiments, color, oklch, accessibility]
 ---
 ## Overview
-Fandeck is a palette tool named after the fan of paint chips you flip through in a paint store. Pick one color and a harmony and it hands back five that work together, laid out like paint chips with a name, a value and live text samples on each. Lock the ones you like, shuffle the rest, check every pair for contrast, and take the palette away as CSS, Tailwind, JSON or a PNG. It is plain [[notes/Tech Stack/HTML]], [[notes/Tech Stack/CSS]] and [[notes/Tech Stack/JavaScript]] with no framework, build step or dependencies, and the harmonies and color names come from the [[notes/Public APIs/Color API]].
+Fandeck is a palette tool named after the fan of paint chips you flip through in a paint store. Pick one color and a harmony and it hands back five that work together, laid out like paint chips with a name, a value and live text samples on each. Lock the ones you like, shuffle the rest, check every pair for contrast, and take the palette away as CSS, Tailwind, JSON or a PNG. It is plain [[notes/Tech Stack/HTML]], [[notes/Tech Stack/CSS]] and [[notes/Tech Stack/JavaScript]] with browser modules loaded directly, and the harmonies and color names come from the [[notes/Public APIs/Color API]].
 
 The first version, Color Scheme Generator, was a color input, a dropdown of harmonies and five swatches to copy. This rebuild keeps it vanilla and asks what picking a palette should actually feel like: judged against neutral grey, checked for contrast, and ready to drop into a project.
 
@@ -26,12 +26,14 @@ Source code: **[Explore Repo](https://github.com/Ashwin-S-Nambiar/Fandeck)**
 | Layer              | Technology / Library                                | Purpose                                                              |
 | ------------------ | --------------------------------------------------- | -------------------------------------------------------------------- |
 | **Markup / Style** | [[notes/Tech Stack/HTML]], [[notes/Tech Stack/CSS]] | One page and one stylesheet, with container queries and `:has()`     |
-| **Script**         | [[notes/Tech Stack/JavaScript]] ES modules          | Nine small modules loaded straight by the browser, no build step     |
+| **Script**         | [[notes/Tech Stack/JavaScript]] ES modules          | Ten small modules loaded straight by the browser     |
 | **Motion**         | CSS transitions, Web Animations API                 | Staggered color crossfades, the sliding harmony highlight and sheets |
 | **Data API**       | [[notes/Public APIs/Color API]]                     | Harmonies from `/scheme` and color names from `/id`                  |
 | **Color Maths**    | Hand-written OKLCH and WCAG 2 contrast              | Conversions, contrast ratios, the offline mixer and token names      |
 | **Type / Icons**   | Hanken Grotesk, Fragment Mono, Phosphor             | Self-hosted fonts and an inline SVG icon sprite                      |
-| **Hosting**        | Vercel                                              | Static files                                                         |
+| **Hosting**        | Vercel                                              | Static app, with functions for shared palette previews                |
+
+Shared palettes have crawler metadata and cached preview images generated on the server with React and `@vercel/og`. A small build copies the static app into `dist`; those preview dependencies stay on the server.
 
 ## Key Features & UX Flow
 1. **The Chips**
